@@ -23,6 +23,8 @@
 @synthesize btnthird;
 @synthesize btnfourth;
 @synthesize controlGroup;
+@synthesize imgview_agentpro;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -52,20 +54,29 @@
    agent_view=[[UIView alloc]initWithFrame:CGRectMake(0,65, 320,65)];
    agent_view.backgroundColor=[UIColor colorWithRed:0.965 green:0.506 blue:0.129 alpha:1];;
     [self.view addSubview:agent_view];
-    name_lbl= [[UILabel alloc]initWithFrame:CGRectMake(100,20,100,20)];
-    name_lbl.font=[UIFont fontWithName:@"Helvetica-Bold" size:16];
+    imgview_agentpro = [[UIImageView alloc]
+                     initWithFrame:CGRectMake(10,12,40,40)];
+    [imgview_agentpro setImage:[UIImage imageNamed:@"agentprofileSIcon.png"]];
+    [imgview_agentpro setContentMode:UIViewContentModeScaleAspectFit];
+    [agent_view addSubview:imgview_agentpro];
+
+    
+    
+    
+    name_lbl= [[UILabel alloc]initWithFrame:CGRectMake(85,12,100,20)];
+    name_lbl.font=[UIFont fontWithName:@"Helvetica" size:16];
    name_lbl.textColor = [UIColor whiteColor];
     name_lbl.backgroundColor = [UIColor clearColor];
-    name_lbl.text = @"name";
+    name_lbl.text = @"Swati Rout";
     [agent_view addSubview:name_lbl];
-    desig_lbl=[[UILabel alloc]initWithFrame:CGRectMake(100,40,100,20)];
-   desig_lbl.font=[UIFont fontWithName:@"Helvetica-Bold" size:16];
+    desig_lbl=[[UILabel alloc]initWithFrame:CGRectMake(85,30,200,20)];
+   desig_lbl.font=[UIFont fontWithName:@"Helvetica-Bold" size:12];
     desig_lbl.textColor = [UIColor whiteColor];
    desig_lbl.backgroundColor = [UIColor clearColor];
-    desig_lbl.text = @"agent";
+    desig_lbl.text = @"Loan recovery Agent";
    [agent_view addSubview:desig_lbl];
     agentdetails_array= @[@"0", @"1", @"2",@"3",@"4"];
-    agentdetails_tv =[[UITableView alloc] initWithFrame:CGRectMake(0,131,320,164) style:UITableViewStylePlain];
+    agentdetails_tv =[[UITableView alloc] initWithFrame:CGRectMake(0,131,320,200) style:UITableViewStylePlain];
   [agentdetails_tv setSeparatorStyle: UITableViewCellSeparatorStyleSingleLine];
    agentdetails_tv.dataSource = self;
         agentdetails_tv.delegate = self;
@@ -139,6 +150,7 @@
     return 1;
     
 }
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
    
@@ -147,7 +159,7 @@
     //
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 32.0;
+    return 40.0;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
@@ -172,15 +184,15 @@
 //    cell.imageView.layer.borderColor = [[UIColor colorWithRed:(38/255.f) green:(171/255.f) blue:(226/255.f) alpha:1.0f] CGColor];
 //    cell.imageView.layer.borderWidth = 1;
 //    cell.imageView.layer.masksToBounds = YES;
-    UILabel *lblCell=[[UILabel alloc]initWithFrame:CGRectMake(60, 10, 200, 20)];
+    UILabel *lblCell=[[UILabel alloc]initWithFrame:CGRectMake(40, 10, 300, 20)];
 //lblCell.backgroundColor=[UIColor colorWithRed:0.302 green:0.569 blue:0.749 alpha:1];
- lblCell.font=[UIFont fontWithName:@"HelveticaNeue" size:16.0];
+ lblCell.font=[UIFont fontWithName:@"HelveticaNeue" size:12.0];
 //    
    lblCell.textColor=[UIColor blackColor];
     
     if (indexPath.row==0)
     {
-       lblCell.text=@"Completed Recovery Visits";
+       lblCell.text=@"Completed Recovery Visits        : 10";
       [cell.contentView addSubview:lblCell];
 //        //        //[cell.contentView addSubview:lblCellLine];
 //        //        imgView.image = [UIImage imageNamed:@"house.png"];
@@ -200,8 +212,11 @@
 //        
 //        
     }
-//    else if (indexPath.row==1)
-//    {
+    else if (indexPath.row==1)
+    {
+        
+        lblCell.text=@"Unsuccessful Recovery Visits     : 2";
+        [cell.contentView addSubview:lblCell];
 //        imgView.image = [UIImage imageNamed:@"img.png"];
 //        imgView.frame=CGRectMake(20, 8, 30, 30);
 //        
@@ -223,34 +238,41 @@
 //        //        imgView.frame=CGRectMake(20, 14, 25, 25);
 //        //
 //        //        [cell.contentView addSubview:imgView];
-//    }
-//    else if (indexPath.row==2)
-//    {
+    }
+    else if (indexPath.row==2)
+    {
+        
+        lblCell.text=@"Pending Recovery Visits             : 25";
+        [cell.contentView addSubview:lblCell];
 //        imgView.image = [UIImage imageNamed:@"img.png"];
 //        imgView.frame=CGRectMake(20, 8, 30, 30);
 //        
 //        [cell.contentView addSubview:imgView];
 //        lblCell.text=@"BRANCH LOCATOR";
 //        [cell.contentView addSubview:lblCell];
-//    }
-//    else if (indexPath.row==3)
-//    {
+    }
+    else if (indexPath.row==3)
+  {
+      lblCell.text=@"Account recovered                     : Rs 50,000";
+      [cell.contentView addSubview:lblCell];
 //        imgView.image = [UIImage imageNamed:@"img.png"];
 //        imgView.frame=CGRectMake(20, 8, 30, 30);
 //        
 //        [cell.contentView addSubview:imgView];
 //        lblCell.text=@"CONTACT US";
 //        [cell.contentView addSubview:lblCell];
-//    }
-//    else if (indexPath.row==4)
-//    {
+    }
+    else if (indexPath.row==4)
+    {
+        lblCell.text=@"Allowance                                   : Rs 400";
+        [cell.contentView addSubview:lblCell];
 //        imgView.image = [UIImage imageNamed:@"img.png"];
 //        imgView.frame=CGRectMake(20, 8, 30, 30);
 //        
 //        [cell.contentView addSubview:imgView];
 //        lblCell.text=@"FEEDBACK";
 //        [cell.contentView addSubview:lblCell];
-//    }
+   }
     return cell;
 }
 

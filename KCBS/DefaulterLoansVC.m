@@ -49,7 +49,7 @@
     loan_view.backgroundColor=[UIColor colorWithRed:0.976 green:0.459 blue:0.016 alpha:1];
     [self.view addSubview:loan_view];
     loan_lbl= [[UILabel alloc]initWithFrame:CGRectMake(100,20,130,20)];
-    loan_lbl.font=[UIFont fontWithName:@"Helvetica-Bold" size:16];
+    loan_lbl.font=[UIFont fontWithName:@"Helvetica-Bold" size:14];
     loan_lbl.textColor = [UIColor whiteColor];
     loan_lbl.backgroundColor = [UIColor clearColor];
     loan_lbl.text = @"Defaulter Loans";

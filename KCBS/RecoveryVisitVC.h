@@ -23,5 +23,6 @@
 @property (nonatomic,strong)UIView *agent_view;
 //@property (nonatomic,strong)UILabel *name_lbl;
 @property (nonatomic,strong)UILabel *name_label;
+@property (nonatomic,strong)UIImageView *imgview_agentrecovery;
 
 @end

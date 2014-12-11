@@ -26,6 +26,8 @@
 }
 @property (nonatomic,strong)UIView *cusacc_view;
 @property (strong,nonatomic) UILabel *welcome_label;
+@property (strong,nonatomic) UILabel *name_label;
+@property (nonatomic,strong) UIImageView *imgview_customacc;
 //@property (nonatomic,strong) UILabel *cusname_label;
 
 @end

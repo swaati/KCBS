@@ -38,6 +38,7 @@
 @synthesize date_lbl;
 @synthesize paintView;
 @synthesize logo;
+@synthesize imgview_agentreminders;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -70,16 +71,16 @@
                                      second,first,third,nil];
         NSString * result = [tableContent  componentsJoinedByString:@""];
         NSLog(@"swati= %@", result);
-    date_lbl=[[UILabel alloc]initWithFrame:CGRectMake(30,30,100,10)];
-    date_lbl.font=[UIFont fontWithName:@"Helvetica-Bold" size:12];
+    date_lbl=[[UILabel alloc]initWithFrame:CGRectMake(22,30,100,10)];
+    date_lbl.font=[UIFont fontWithName:@"Helvetica" size:10];
     date_lbl.textColor = [UIColor blackColor];
-    date_lbl.backgroundColor = [UIColor redColor];
+    //date_lbl.backgroundColor = [UIColor redColor];
     date_lbl.text =result;
     paintView=[[UIView alloc]initWithFrame:CGRectMake(30,10,100,40)];
-    [paintView setBackgroundColor:[UIColor yellowColor]];
+    //[paintView setBackgroundColor:[UIColor yellowColor]];
     self.parentViewController.navigationItem.titleView=paintView;
     logo=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"small.png"]];
-    logo.frame=CGRectMake(10,10,44,29);
+    logo.frame=CGRectMake(29,0,44,29);
     [self.paintView addSubview:logo];
     [self.paintView addSubview:date_lbl];
 
@@ -87,12 +88,17 @@
     reminders_view=[[UIView alloc]initWithFrame:CGRectMake(0,65, 320,65)];
     reminders_view.backgroundColor=[UIColor colorWithRed:0.976 green:0.459 blue:0.016 alpha:1];
     [self.view addSubview:reminders_view];
-    reminders_lbl= [[UILabel alloc]initWithFrame:CGRectMake(100,20,100,20)];
-    reminders_lbl.font=[UIFont fontWithName:@"Helvetica-Bold" size:16];
+    reminders_lbl= [[UILabel alloc]initWithFrame:CGRectMake(85,20,130,20)];
+    reminders_lbl.font=[UIFont fontWithName:@"Helvetica" size:16];
     reminders_lbl.textColor = [UIColor whiteColor];
     reminders_lbl.backgroundColor = [UIColor clearColor];
     reminders_lbl.text = @"Reminders";
     [reminders_view addSubview:reminders_lbl];
+    imgview_agentreminders = [[UIImageView alloc]
+                             initWithFrame:CGRectMake(10,12,40,40)];
+    [imgview_agentreminders setImage:[UIImage imageNamed:@"reminderSIcon.png"]];
+    [imgview_agentreminders setContentMode:UIViewContentModeScaleAspectFit];
+    [reminders_view addSubview:imgview_agentreminders];
     // Do any additional setup after loading the view.
 }
 

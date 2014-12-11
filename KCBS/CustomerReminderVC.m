@@ -20,6 +20,7 @@
 @synthesize name_lbl;
 @synthesize addreminder_btn;
 @synthesize dataArray;
+@synthesize imgview_customreminders;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,8 +42,13 @@
     name_lbl.font=[UIFont fontWithName:@"Helvetica-Bold" size:16];
     name_lbl.textColor = [UIColor whiteColor];
     name_lbl.backgroundColor = [UIColor clearColor];
-    name_lbl.text = @"name";
+    name_lbl.text = @"Reminders";
     [reminder_view addSubview:name_lbl];
+    imgview_customreminders = [[UIImageView alloc]
+                              initWithFrame:CGRectMake(12,8,40,40)];
+    [imgview_customreminders setImage:[UIImage imageNamed:@"reminderSIcon.png"]];
+    [imgview_customreminders setContentMode:UIViewContentModeScaleAspectFit];
+    [reminder_view addSubview:imgview_customreminders];
     
     customerreminders_array= @[@"0", @"1", @"2",@"3",@"4"];
     customerdreminders_tv =[[UITableView alloc] initWithFrame:CGRectMake(0,131,320,480) style:UITableViewStylePlain];
@@ -141,20 +147,23 @@
 
 -(void)addreminderbtn_Clicked
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    
-    
-    UILabel *father_namelbl=[[UILabel alloc]initWithFrame:CGRectMake(10,10,200,20)];
-    father_namelbl.numberOfLines = 0;
-    father_namelbl.font = [UIFont fontWithName:@"Helvetica-Bold" size:15];
-    father_namelbl.textColor = [UIColor blackColor];
-    father_namelbl.text=@"Recovery Visits";
-    [cell.contentView addSubview:father_namelbl];
-    
-
-    [dataArray addObject:cell];
-    [customerdreminders_tv reloadData];
+    CustomerAddremindersVC *addremind_vc = [[ CustomerAddremindersVC alloc]init];
+  [self.navigationController pushViewController:addremind_vc animated:YES];
+   addremind_vc = nil;
+//    static NSString *CellIdentifier = @"Cell";
+//    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+//    
+//    
+//    UILabel *father_namelbl=[[UILabel alloc]initWithFrame:CGRectMake(10,10,200,20)];
+//    father_namelbl.numberOfLines = 0;
+//    father_namelbl.font = [UIFont fontWithName:@"Helvetica-Bold" size:15];
+//    father_namelbl.textColor = [UIColor blackColor];
+//    father_namelbl.text=@"Recovery Visits";
+//    [cell.contentView addSubview:father_namelbl];
+//    
+//
+//    [dataArray addObject:cell];
+//    [customerdreminders_tv reloadData];
 
 }
 - (void)didReceiveMemoryWarning

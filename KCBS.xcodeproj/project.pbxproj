@@ -25,6 +25,16 @@
 		C002F5B01A15DFC500FBA197 /* BranchLocatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C002F5AF1A15DFC500FBA197 /* BranchLocatorViewController.m */; };
 		C002F5B31A15E0FC00FBA197 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C002F5B21A15E0FC00FBA197 /* ContactUsViewController.m */; };
 		C002F5B61A15E20A00FBA197 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C002F5B51A15E20A00FBA197 /* FeedbackViewController.m */; };
+		C009AE881A39A01700A2F255 /* biglogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C009AE871A39A01700A2F255 /* biglogo.png */; };
+		C00E35351A382CA3000C1DE5 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C00E35341A382CA3000C1DE5 /* bg.png */; };
+		C00E353E1A383125000C1DE5 /* termssIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C00E35361A383125000C1DE5 /* termssIcon.png */; };
+		C00E353F1A383125000C1DE5 /* sharesIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C00E35371A383125000C1DE5 /* sharesIcon.png */; };
+		C00E35401A383125000C1DE5 /* proInfosIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C00E35381A383125000C1DE5 /* proInfosIcon.png */; };
+		C00E35411A383126000C1DE5 /* feedbacksIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C00E35391A383125000C1DE5 /* feedbacksIcon.png */; };
+		C00E35421A383126000C1DE5 /* custLoginsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C00E353A1A383125000C1DE5 /* custLoginsIcon.png */; };
+		C00E35431A383126000C1DE5 /* contactsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C00E353B1A383125000C1DE5 /* contactsIcon.png */; };
+		C00E35441A383126000C1DE5 /* agentLoginsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C00E353C1A383125000C1DE5 /* agentLoginsIcon.png */; };
+		C00E35451A383126000C1DE5 /* brachLocatorsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C00E353D1A383125000C1DE5 /* brachLocatorsIcon.png */; };
 		C00FD65C1A31828A006594C1 /* RecoveryVisitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C00FD65A1A31828A006594C1 /* RecoveryVisitVC.m */; };
 		C00FD65D1A31828A006594C1 /* RecoveryVisitVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C00FD65B1A31828A006594C1 /* RecoveryVisitVC.xib */; };
 		C00FD6601A31B42B006594C1 /* CustomerProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C00FD65F1A31B42B006594C1 /* CustomerProfileVC.m */; };
@@ -58,10 +68,27 @@
 		C013CB321A19C8710073DA65 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C013CB311A19C8710073DA65 /* MapKit.framework */; };
 		C013CB341A19C87E0073DA65 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C013CB331A19C87E0073DA65 /* CoreLocation.framework */; };
 		C013CB371A19C8EF0073DA65 /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C013CB361A19C8EF0073DA65 /* MapAnnotation.m */; };
+		C01C64C81A396BD30023F9A7 /* agentprofileSIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C01C64C71A396BD30023F9A7 /* agentprofileSIcon.png */; };
+		C01C64CA1A396BDF0023F9A7 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C01C64C91A396BDF0023F9A7 /* backButton.png */; };
+		C01C64CC1A396C440023F9A7 /* loanViewIcon_Small.png in Resources */ = {isa = PBXBuildFile; fileRef = C01C64CB1A396C440023F9A7 /* loanViewIcon_Small.png */; };
+		C01C64CE1A396C520023F9A7 /* logoutIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C01C64CD1A396C520023F9A7 /* logoutIcon.png */; };
+		C01C64D01A396C650023F9A7 /* profileIcon_Small.png in Resources */ = {isa = PBXBuildFile; fileRef = C01C64CF1A396C650023F9A7 /* profileIcon_Small.png */; };
+		C01C64D21A396C800023F9A7 /* recoveryVisitIcon_Small.png in Resources */ = {isa = PBXBuildFile; fileRef = C01C64D11A396C800023F9A7 /* recoveryVisitIcon_Small.png */; };
+		C01C64D41A396CB60023F9A7 /* remindersIcon_Small.png in Resources */ = {isa = PBXBuildFile; fileRef = C01C64D31A396CB60023F9A7 /* remindersIcon_Small.png */; };
+		C01C64D61A39823E0023F9A7 /* accSummaryIcon_Small.png in Resources */ = {isa = PBXBuildFile; fileRef = C01C64D51A39823E0023F9A7 /* accSummaryIcon_Small.png */; };
 		C02402FB1A35B8DA00BBAE36 /* CustomerAddremindersVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C02402F91A35B8DA00BBAE36 /* CustomerAddremindersVC.m */; };
 		C02402FC1A35B8DA00BBAE36 /* CustomerAddremindersVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C02402FA1A35B8DA00BBAE36 /* CustomerAddremindersVC.xib */; };
 		C0640FCE1A232E070035CEDA /* LoanViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C0640FCD1A232E070035CEDA /* LoanViewVC.m */; };
 		C0640FD11A232E270035CEDA /* RemindersVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C0640FD01A232E270035CEDA /* RemindersVC.m */; };
+		C0FEB7F81A3859D600FA7C38 /* agentLoginBIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FEB7F71A3859D600FA7C38 /* agentLoginBIcon.png */; };
+		C0FEB7FA1A3859F100FA7C38 /* contactBIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FEB7F91A3859F100FA7C38 /* contactBIcon.png */; };
+		C0FEB7FC1A3859F900FA7C38 /* custLoginBIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FEB7FB1A3859F900FA7C38 /* custLoginBIcon.png */; };
+		C0FEB7FE1A385A0600FA7C38 /* feedbackBIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FEB7FD1A385A0600FA7C38 /* feedbackBIcon.png */; };
+		C0FEB8001A3867A000FA7C38 /* reminderSIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FEB7FF1A3867A000FA7C38 /* reminderSIcon.png */; };
+		C0FEB8021A3868B700FA7C38 /* defaulterLoanIcon_Small.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FEB8011A3868B700FA7C38 /* defaulterLoanIcon_Small.png */; };
+		C0FEB8061A386B1200FA7C38 /* recoveryVisitSIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FEB8031A386B1200FA7C38 /* recoveryVisitSIcon.png */; };
+		C0FEB8071A386B1200FA7C38 /* loanViewSIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FEB8041A386B1200FA7C38 /* loanViewSIcon.png */; };
+		C0FEB8081A386B1200FA7C38 /* defaulterLoanSIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FEB8051A386B1200FA7C38 /* defaulterLoanSIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,9 +127,19 @@
 		C002F5AE1A15DFC500FBA197 /* BranchLocatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BranchLocatorViewController.h; sourceTree = "<group>"; };
 		C002F5AF1A15DFC500FBA197 /* BranchLocatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BranchLocatorViewController.m; sourceTree = "<group>"; };
 		C002F5B11A15E0FC00FBA197 /* ContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
-		C002F5B21A15E0FC00FBA197 /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
+		C002F5B21A15E0FC00FBA197 /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; usesTabs = 1; wrapsLines = 1; };
 		C002F5B41A15E20A00FBA197 /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
 		C002F5B51A15E20A00FBA197 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
+		C009AE871A39A01700A2F255 /* biglogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = biglogo.png; sourceTree = "<group>"; };
+		C00E35341A382CA3000C1DE5 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		C00E35361A383125000C1DE5 /* termssIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = termssIcon.png; sourceTree = "<group>"; };
+		C00E35371A383125000C1DE5 /* sharesIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sharesIcon.png; sourceTree = "<group>"; };
+		C00E35381A383125000C1DE5 /* proInfosIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proInfosIcon.png; sourceTree = "<group>"; };
+		C00E35391A383125000C1DE5 /* feedbacksIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feedbacksIcon.png; sourceTree = "<group>"; };
+		C00E353A1A383125000C1DE5 /* custLoginsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custLoginsIcon.png; sourceTree = "<group>"; };
+		C00E353B1A383125000C1DE5 /* contactsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contactsIcon.png; sourceTree = "<group>"; };
+		C00E353C1A383125000C1DE5 /* agentLoginsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agentLoginsIcon.png; sourceTree = "<group>"; };
+		C00E353D1A383125000C1DE5 /* brachLocatorsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brachLocatorsIcon.png; sourceTree = "<group>"; };
 		C00FD6591A31828A006594C1 /* RecoveryVisitVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecoveryVisitVC.h; sourceTree = "<group>"; };
 		C00FD65A1A31828A006594C1 /* RecoveryVisitVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecoveryVisitVC.m; sourceTree = "<group>"; };
 		C00FD65B1A31828A006594C1 /* RecoveryVisitVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecoveryVisitVC.xib; sourceTree = "<group>"; };
@@ -149,6 +186,14 @@
 		C013CB331A19C87E0073DA65 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C013CB351A19C8EF0073DA65 /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
 		C013CB361A19C8EF0073DA65 /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
+		C01C64C71A396BD30023F9A7 /* agentprofileSIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agentprofileSIcon.png; sourceTree = "<group>"; };
+		C01C64C91A396BDF0023F9A7 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
+		C01C64CB1A396C440023F9A7 /* loanViewIcon_Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loanViewIcon_Small.png; sourceTree = "<group>"; };
+		C01C64CD1A396C520023F9A7 /* logoutIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoutIcon.png; sourceTree = "<group>"; };
+		C01C64CF1A396C650023F9A7 /* profileIcon_Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profileIcon_Small.png; sourceTree = "<group>"; };
+		C01C64D11A396C800023F9A7 /* recoveryVisitIcon_Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recoveryVisitIcon_Small.png; sourceTree = "<group>"; };
+		C01C64D31A396CB60023F9A7 /* remindersIcon_Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = remindersIcon_Small.png; sourceTree = "<group>"; };
+		C01C64D51A39823E0023F9A7 /* accSummaryIcon_Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accSummaryIcon_Small.png; sourceTree = "<group>"; };
 		C02402F81A35B8DA00BBAE36 /* CustomerAddremindersVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerAddremindersVC.h; sourceTree = "<group>"; };
 		C02402F91A35B8DA00BBAE36 /* CustomerAddremindersVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerAddremindersVC.m; sourceTree = "<group>"; };
 		C02402FA1A35B8DA00BBAE36 /* CustomerAddremindersVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomerAddremindersVC.xib; sourceTree = "<group>"; };
@@ -156,6 +201,15 @@
 		C0640FCD1A232E070035CEDA /* LoanViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanViewVC.m; sourceTree = "<group>"; };
 		C0640FCF1A232E270035CEDA /* RemindersVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindersVC.h; sourceTree = "<group>"; };
 		C0640FD01A232E270035CEDA /* RemindersVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindersVC.m; sourceTree = "<group>"; };
+		C0FEB7F71A3859D600FA7C38 /* agentLoginBIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agentLoginBIcon.png; sourceTree = "<group>"; };
+		C0FEB7F91A3859F100FA7C38 /* contactBIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contactBIcon.png; sourceTree = "<group>"; };
+		C0FEB7FB1A3859F900FA7C38 /* custLoginBIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custLoginBIcon.png; sourceTree = "<group>"; };
+		C0FEB7FD1A385A0600FA7C38 /* feedbackBIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feedbackBIcon.png; sourceTree = "<group>"; };
+		C0FEB7FF1A3867A000FA7C38 /* reminderSIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reminderSIcon.png; sourceTree = "<group>"; };
+		C0FEB8011A3868B700FA7C38 /* defaulterLoanIcon_Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaulterLoanIcon_Small.png; sourceTree = "<group>"; };
+		C0FEB8031A386B1200FA7C38 /* recoveryVisitSIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recoveryVisitSIcon.png; sourceTree = "<group>"; };
+		C0FEB8041A386B1200FA7C38 /* loanViewSIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loanViewSIcon.png; sourceTree = "<group>"; };
+		C0FEB8051A386B1200FA7C38 /* defaulterLoanSIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaulterLoanSIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,7 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				C002F57C1A15D6E600FBA197 /* KCBS */,
-				C01170551A20AC93000A88CC /* New Group */,
 				C002F5951A15D6E600FBA197 /* KCBSTests */,
 				C002F5751A15D6E600FBA197 /* Frameworks */,
 				C002F5741A15D6E600FBA197 /* Products */,
@@ -220,73 +273,17 @@
 		C002F57C1A15D6E600FBA197 /* KCBS */ = {
 			isa = PBXGroup;
 			children = (
-				C00FE0E81A247F030031D3A1 /* CollapseClick.h */,
-				C00FE0E91A247F030031D3A1 /* CollapseClick.m */,
-				C00FE0EA1A247F030031D3A1 /* CollapseClickCell.h */,
-				C00FE0EB1A247F030031D3A1 /* CollapseClickCell.m */,
-				C00FE0EC1A247F030031D3A1 /* CollapseClickCell.xib */,
-				C00FE0ED1A247F030031D3A1 /* CollapseClickArrow.h */,
-				C00FE0EE1A247F030031D3A1 /* CollapseClickArrow.m */,
-				C00FE0FC1A2484340031D3A1 /* password-01.png */,
-				C00FE0FD1A2484340031D3A1 /* username-01.png */,
-				C00FE0F31A247F6C0031D3A1 /* icon57.png */,
-				C00FE0F41A247F6C0031D3A1 /* icon114.png */,
-				C01170651A20AD5D000A88CC /* green.png */,
-				C01170671A20AD64000A88CC /* red.png */,
-				C01170571A20AD2D000A88CC /* small.png */,
-				C01170591A20AD3B000A88CC /* tennis18.png */,
-				C011705A1A20AD3B000A88CC /* trophy45.png */,
-				C011705B1A20AD3B000A88CC /* walking17.png */,
-				C011705C1A20AD3B000A88CC /* man271.png */,
-				C011705D1A20AD3B000A88CC /* three115.png */,
-				C011705E1A20AD3B000A88CC /* magnifying4.png */,
-				C012F5A81A1F39B300893ED3 /* ControlGroup.h */,
-				C012F5A91A1F39C000893ED3 /* ControlGroup.m */,
-				C002F5851A15D6E600FBA197 /* AppDelegate.h */,
-				C002F5861A15D6E600FBA197 /* AppDelegate.m */,
+				C01C64C61A396A9C0023F9A7 /* MainMenuClasses */,
+				C01C64C51A396A6A0023F9A7 /* FeedbackClasses */,
+				C01C64C41A396A480023F9A7 /* ContactUsClasses */,
+				C01C64C31A3969AE0023F9A7 /* BranchLocatorClasses */,
+				C01C64C21A3969690023F9A7 /* CustomerClasses */,
+				C01C64C11A3968B40023F9A7 /* AgentClasses */,
+				C01C64C01A3968620023F9A7 /* Libraries */,
+				C01C64BF1A3967DC0023F9A7 /* images */,
 				C002F5881A15D6E600FBA197 /* Images.xcassets */,
 				C01000AD1A1C720200822117 /* Default.png */,
 				C002F57D1A15D6E600FBA197 /* Supporting Files */,
-				C002F5A51A15D76800FBA197 /* MenuViewController.h */,
-				C002F5A61A15D76800FBA197 /* MenuViewController.m */,
-				C002F5A81A15D94900FBA197 /* AgentLogInViewController.h */,
-				C002F5A91A15D94900FBA197 /* AgentLogInViewController.m */,
-				C002F5AB1A15DCBC00FBA197 /* CustomerLogInViewController.h */,
-				C002F5AC1A15DCBC00FBA197 /* CustomerLogInViewController.m */,
-				C002F5AE1A15DFC500FBA197 /* BranchLocatorViewController.h */,
-				C002F5AF1A15DFC500FBA197 /* BranchLocatorViewController.m */,
-				C002F5B11A15E0FC00FBA197 /* ContactUsViewController.h */,
-				C002F5B21A15E0FC00FBA197 /* ContactUsViewController.m */,
-				C002F5B41A15E20A00FBA197 /* FeedbackViewController.h */,
-				C002F5B51A15E20A00FBA197 /* FeedbackViewController.m */,
-				C013CB351A19C8EF0073DA65 /* MapAnnotation.h */,
-				C013CB361A19C8EF0073DA65 /* MapAnnotation.m */,
-				C0116FFE1A2057BB000A88CC /* AgentProfileVC.h */,
-				C0116FFF1A2057BB000A88CC /* AgentProfileVC.m */,
-				C00FD65E1A31B42B006594C1 /* CustomerProfileVC.h */,
-				C00FD65F1A31B42B006594C1 /* CustomerProfileVC.m */,
-				C0100CED1A230B2400A1A111 /* DefaulterLoansVC.h */,
-				C0100CEE1A230B2400A1A111 /* DefaulterLoansVC.m */,
-				C0640FCC1A232E070035CEDA /* LoanViewVC.h */,
-				C0640FCD1A232E070035CEDA /* LoanViewVC.m */,
-				C0640FCF1A232E270035CEDA /* RemindersVC.h */,
-				C0640FD01A232E270035CEDA /* RemindersVC.m */,
-				C00FE0F71A24837C0031D3A1 /* ViewController.h */,
-				C00FE0F81A24837C0031D3A1 /* ViewController.m */,
-				C00FE0E51A247DF20031D3A1 /* DynamicLoansVC.h */,
-				C00FE0E61A247DF20031D3A1 /* DynamicLoansVC.m */,
-				C00FD6591A31828A006594C1 /* RecoveryVisitVC.h */,
-				C00FD65A1A31828A006594C1 /* RecoveryVisitVC.m */,
-				C00FD65B1A31828A006594C1 /* RecoveryVisitVC.xib */,
-				C00FD6611A31BB8E006594C1 /* CustomerAccountSumVC.h */,
-				C00FD6621A31BB8E006594C1 /* CustomerAccountSumVC.m */,
-				C00FD6631A31BB8E006594C1 /* CustomerAccountSumVC.xib */,
-				C00FD6661A31BC23006594C1 /* CustomerReminderVC.h */,
-				C00FD6671A31BC23006594C1 /* CustomerReminderVC.m */,
-				C00FD6681A31BC23006594C1 /* CustomerReminderVC.xib */,
-				C02402F81A35B8DA00BBAE36 /* CustomerAddremindersVC.h */,
-				C02402F91A35B8DA00BBAE36 /* CustomerAddremindersVC.m */,
-				C02402FA1A35B8DA00BBAE36 /* CustomerAddremindersVC.xib */,
 			);
 			path = KCBS;
 			sourceTree = "<group>";
@@ -320,11 +317,151 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C01170551A20AC93000A88CC /* New Group */ = {
+		C01C64BF1A3967DC0023F9A7 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C009AE871A39A01700A2F255 /* biglogo.png */,
+				C01C64D51A39823E0023F9A7 /* accSummaryIcon_Small.png */,
+				C01C64D31A396CB60023F9A7 /* remindersIcon_Small.png */,
+				C01C64D11A396C800023F9A7 /* recoveryVisitIcon_Small.png */,
+				C01C64CF1A396C650023F9A7 /* profileIcon_Small.png */,
+				C01C64CD1A396C520023F9A7 /* logoutIcon.png */,
+				C01C64CB1A396C440023F9A7 /* loanViewIcon_Small.png */,
+				C01C64C91A396BDF0023F9A7 /* backButton.png */,
+				C01C64C71A396BD30023F9A7 /* agentprofileSIcon.png */,
+				C0FEB8011A3868B700FA7C38 /* defaulterLoanIcon_Small.png */,
+				C0FEB8031A386B1200FA7C38 /* recoveryVisitSIcon.png */,
+				C0FEB8041A386B1200FA7C38 /* loanViewSIcon.png */,
+				C0FEB8051A386B1200FA7C38 /* defaulterLoanSIcon.png */,
+				C0FEB7FF1A3867A000FA7C38 /* reminderSIcon.png */,
+				C0FEB7F71A3859D600FA7C38 /* agentLoginBIcon.png */,
+				C0FEB7F91A3859F100FA7C38 /* contactBIcon.png */,
+				C0FEB7FB1A3859F900FA7C38 /* custLoginBIcon.png */,
+				C0FEB7FD1A385A0600FA7C38 /* feedbackBIcon.png */,
+				C00E35361A383125000C1DE5 /* termssIcon.png */,
+				C00E35371A383125000C1DE5 /* sharesIcon.png */,
+				C00E35381A383125000C1DE5 /* proInfosIcon.png */,
+				C00E35391A383125000C1DE5 /* feedbacksIcon.png */,
+				C00E353A1A383125000C1DE5 /* custLoginsIcon.png */,
+				C00E353B1A383125000C1DE5 /* contactsIcon.png */,
+				C00E353C1A383125000C1DE5 /* agentLoginsIcon.png */,
+				C00E353D1A383125000C1DE5 /* brachLocatorsIcon.png */,
+				C01170651A20AD5D000A88CC /* green.png */,
+				C01170671A20AD64000A88CC /* red.png */,
+				C01170571A20AD2D000A88CC /* small.png */,
+				C01170591A20AD3B000A88CC /* tennis18.png */,
+				C011705A1A20AD3B000A88CC /* trophy45.png */,
+				C011705B1A20AD3B000A88CC /* walking17.png */,
+				C011705C1A20AD3B000A88CC /* man271.png */,
+				C011705D1A20AD3B000A88CC /* three115.png */,
+				C011705E1A20AD3B000A88CC /* magnifying4.png */,
+				C00FE0FC1A2484340031D3A1 /* password-01.png */,
+				C00FE0FD1A2484340031D3A1 /* username-01.png */,
+				C00FE0F41A247F6C0031D3A1 /* icon114.png */,
+				C00E35341A382CA3000C1DE5 /* bg.png */,
+				C00FE0F31A247F6C0031D3A1 /* icon57.png */,
 			);
-			name = "New Group";
+			name = images;
+			sourceTree = "<group>";
+		};
+		C01C64C01A3968620023F9A7 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				C00FE0E81A247F030031D3A1 /* CollapseClick.h */,
+				C00FE0E91A247F030031D3A1 /* CollapseClick.m */,
+				C00FE0EA1A247F030031D3A1 /* CollapseClickCell.h */,
+				C00FE0EB1A247F030031D3A1 /* CollapseClickCell.m */,
+				C00FE0EC1A247F030031D3A1 /* CollapseClickCell.xib */,
+				C00FE0ED1A247F030031D3A1 /* CollapseClickArrow.h */,
+				C00FE0EE1A247F030031D3A1 /* CollapseClickArrow.m */,
+				C012F5A81A1F39B300893ED3 /* ControlGroup.h */,
+				C012F5A91A1F39C000893ED3 /* ControlGroup.m */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		C01C64C11A3968B40023F9A7 /* AgentClasses */ = {
+			isa = PBXGroup;
+			children = (
+				C00FD6591A31828A006594C1 /* RecoveryVisitVC.h */,
+				C00FD65A1A31828A006594C1 /* RecoveryVisitVC.m */,
+				C00FD65B1A31828A006594C1 /* RecoveryVisitVC.xib */,
+				C00FE0F71A24837C0031D3A1 /* ViewController.h */,
+				C00FE0F81A24837C0031D3A1 /* ViewController.m */,
+				C00FE0E51A247DF20031D3A1 /* DynamicLoansVC.h */,
+				C00FE0E61A247DF20031D3A1 /* DynamicLoansVC.m */,
+				C0100CED1A230B2400A1A111 /* DefaulterLoansVC.h */,
+				C0100CEE1A230B2400A1A111 /* DefaulterLoansVC.m */,
+				C0640FCC1A232E070035CEDA /* LoanViewVC.h */,
+				C0640FCD1A232E070035CEDA /* LoanViewVC.m */,
+				C0640FCF1A232E270035CEDA /* RemindersVC.h */,
+				C0640FD01A232E270035CEDA /* RemindersVC.m */,
+				C0116FFE1A2057BB000A88CC /* AgentProfileVC.h */,
+				C0116FFF1A2057BB000A88CC /* AgentProfileVC.m */,
+				C002F5A81A15D94900FBA197 /* AgentLogInViewController.h */,
+				C002F5A91A15D94900FBA197 /* AgentLogInViewController.m */,
+			);
+			name = AgentClasses;
+			sourceTree = "<group>";
+		};
+		C01C64C21A3969690023F9A7 /* CustomerClasses */ = {
+			isa = PBXGroup;
+			children = (
+				C00FD6661A31BC23006594C1 /* CustomerReminderVC.h */,
+				C00FD6671A31BC23006594C1 /* CustomerReminderVC.m */,
+				C00FD6681A31BC23006594C1 /* CustomerReminderVC.xib */,
+				C02402F81A35B8DA00BBAE36 /* CustomerAddremindersVC.h */,
+				C02402F91A35B8DA00BBAE36 /* CustomerAddremindersVC.m */,
+				C02402FA1A35B8DA00BBAE36 /* CustomerAddremindersVC.xib */,
+				C00FD65E1A31B42B006594C1 /* CustomerProfileVC.h */,
+				C00FD65F1A31B42B006594C1 /* CustomerProfileVC.m */,
+				C00FD6611A31BB8E006594C1 /* CustomerAccountSumVC.h */,
+				C00FD6621A31BB8E006594C1 /* CustomerAccountSumVC.m */,
+				C00FD6631A31BB8E006594C1 /* CustomerAccountSumVC.xib */,
+				C002F5AB1A15DCBC00FBA197 /* CustomerLogInViewController.h */,
+				C002F5AC1A15DCBC00FBA197 /* CustomerLogInViewController.m */,
+			);
+			name = CustomerClasses;
+			sourceTree = "<group>";
+		};
+		C01C64C31A3969AE0023F9A7 /* BranchLocatorClasses */ = {
+			isa = PBXGroup;
+			children = (
+				C013CB361A19C8EF0073DA65 /* MapAnnotation.m */,
+				C013CB351A19C8EF0073DA65 /* MapAnnotation.h */,
+				C002F5AF1A15DFC500FBA197 /* BranchLocatorViewController.m */,
+				C002F5AE1A15DFC500FBA197 /* BranchLocatorViewController.h */,
+			);
+			name = BranchLocatorClasses;
+			sourceTree = "<group>";
+		};
+		C01C64C41A396A480023F9A7 /* ContactUsClasses */ = {
+			isa = PBXGroup;
+			children = (
+				C002F5B21A15E0FC00FBA197 /* ContactUsViewController.m */,
+				C002F5B11A15E0FC00FBA197 /* ContactUsViewController.h */,
+			);
+			name = ContactUsClasses;
+			sourceTree = "<group>";
+		};
+		C01C64C51A396A6A0023F9A7 /* FeedbackClasses */ = {
+			isa = PBXGroup;
+			children = (
+				C002F5B51A15E20A00FBA197 /* FeedbackViewController.m */,
+				C002F5B41A15E20A00FBA197 /* FeedbackViewController.h */,
+			);
+			name = FeedbackClasses;
+			sourceTree = "<group>";
+		};
+		C01C64C61A396A9C0023F9A7 /* MainMenuClasses */ = {
+			isa = PBXGroup;
+			children = (
+				C002F5A61A15D76800FBA197 /* MenuViewController.m */,
+				C002F5A51A15D76800FBA197 /* MenuViewController.h */,
+				C002F5861A15D6E600FBA197 /* AppDelegate.m */,
+				C002F5851A15D6E600FBA197 /* AppDelegate.h */,
+			);
+			name = MainMenuClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,26 +539,53 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0FEB7F81A3859D600FA7C38 /* agentLoginBIcon.png in Resources */,
+				C009AE881A39A01700A2F255 /* biglogo.png in Resources */,
+				C00E353F1A383125000C1DE5 /* sharesIcon.png in Resources */,
+				C01C64D21A396C800023F9A7 /* recoveryVisitIcon_Small.png in Resources */,
+				C01C64D01A396C650023F9A7 /* profileIcon_Small.png in Resources */,
 				C01170611A20AD3B000A88CC /* walking17.png in Resources */,
 				C01170661A20AD5D000A88CC /* green.png in Resources */,
+				C01C64C81A396BD30023F9A7 /* agentprofileSIcon.png in Resources */,
 				C00FE0FF1A2484340031D3A1 /* username-01.png in Resources */,
+				C00E35451A383126000C1DE5 /* brachLocatorsIcon.png in Resources */,
 				C002F5811A15D6E600FBA197 /* InfoPlist.strings in Resources */,
+				C0FEB8071A386B1200FA7C38 /* loanViewSIcon.png in Resources */,
+				C00E35411A383126000C1DE5 /* feedbacksIcon.png in Resources */,
+				C00E35401A383125000C1DE5 /* proInfosIcon.png in Resources */,
+				C0FEB8001A3867A000FA7C38 /* reminderSIcon.png in Resources */,
+				C00E353E1A383125000C1DE5 /* termssIcon.png in Resources */,
 				C00FD66A1A31BC23006594C1 /* CustomerReminderVC.xib in Resources */,
 				C00FE0F11A247F030031D3A1 /* CollapseClickCell.xib in Resources */,
+				C0FEB8021A3868B700FA7C38 /* defaulterLoanIcon_Small.png in Resources */,
 				C02402FC1A35B8DA00BBAE36 /* CustomerAddremindersVC.xib in Resources */,
 				C011705F1A20AD3B000A88CC /* tennis18.png in Resources */,
+				C00E35441A383126000C1DE5 /* agentLoginsIcon.png in Resources */,
+				C0FEB8061A386B1200FA7C38 /* recoveryVisitSIcon.png in Resources */,
+				C01C64CA1A396BDF0023F9A7 /* backButton.png in Resources */,
 				C00FD6651A31BB8E006594C1 /* CustomerAccountSumVC.xib in Resources */,
 				C01170621A20AD3B000A88CC /* man271.png in Resources */,
 				C00FD65D1A31828A006594C1 /* RecoveryVisitVC.xib in Resources */,
+				C00E35431A383126000C1DE5 /* contactsIcon.png in Resources */,
+				C0FEB8081A386B1200FA7C38 /* defaulterLoanSIcon.png in Resources */,
+				C01C64D61A39823E0023F9A7 /* accSummaryIcon_Small.png in Resources */,
+				C00E35421A383126000C1DE5 /* custLoginsIcon.png in Resources */,
+				C01C64CC1A396C440023F9A7 /* loanViewIcon_Small.png in Resources */,
 				C01170601A20AD3B000A88CC /* trophy45.png in Resources */,
 				C01170631A20AD3B000A88CC /* three115.png in Resources */,
 				C00FE0F51A247F6C0031D3A1 /* icon57.png in Resources */,
 				C01170581A20AD2D000A88CC /* small.png in Resources */,
 				C01000AE1A1C720200822117 /* Default.png in Resources */,
 				C01170681A20AD64000A88CC /* red.png in Resources */,
+				C01C64D41A396CB60023F9A7 /* remindersIcon_Small.png in Resources */,
+				C01C64CE1A396C520023F9A7 /* logoutIcon.png in Resources */,
+				C0FEB7FA1A3859F100FA7C38 /* contactBIcon.png in Resources */,
 				C002F5891A15D6E600FBA197 /* Images.xcassets in Resources */,
+				C0FEB7FE1A385A0600FA7C38 /* feedbackBIcon.png in Resources */,
 				C01170641A20AD3B000A88CC /* magnifying4.png in Resources */,
 				C00FE0F61A247F6C0031D3A1 /* icon114.png in Resources */,
+				C00E35351A382CA3000C1DE5 /* bg.png in Resources */,
+				C0FEB7FC1A3859F900FA7C38 /* custLoginBIcon.png in Resources */,
 				C00FE0FE1A2484340031D3A1 /* password-01.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

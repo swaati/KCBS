@@ -22,6 +22,12 @@
 @property (nonatomic,strong)UIView *agent_view;
 //@property (nonatomic,strong)UILabel *name_lbl;
 @property (nonatomic,strong)UILabel *name_label;
+@property (nonatomic,strong)UILabel *phone_label;
+@property (nonatomic,strong)UILabel *add_label;
+@property (nonatomic,strong)UILabel *amount_label;
+@property (nonatomic,strong)UILabel *interest_label;
+@property(nonatomic,strong)UIImageView *imgview_defaultpro;
+
 //@property (nonatomic,strong)CollapseClick *myCollapseClick;
 
 

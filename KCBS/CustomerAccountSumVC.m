@@ -15,6 +15,8 @@
 @implementation CustomerAccountSumVC
 @synthesize cusacc_view;
 @synthesize welcome_label;
+@synthesize name_label;
+@synthesize imgview_customacc;
 //@synthesize cusname_label;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -39,7 +41,17 @@
     
    welcome_label.text = @"Welcome";
    [cusacc_view addSubview:welcome_label];
-    
+    name_label= [[UILabel alloc]initWithFrame:CGRectMake(100,40,100,20)];
+    name_label.font=[UIFont fontWithName:@"Helvetica-Bold" size:14];
+    name_label.textColor = [UIColor whiteColor];
+    name_label.backgroundColor = [UIColor clearColor];
+    name_label.text = @"Swati Rout";
+    [cusacc_view addSubview:name_label];
+    imgview_customacc = [[UIImageView alloc]
+                         initWithFrame:CGRectMake(12,15,40,40)];
+    [imgview_customacc setImage:[UIImage imageNamed:@"agentprofileSIcon.png"]];
+    [imgview_customacc setContentMode:UIViewContentModeScaleAspectFit];
+    [cusacc_view addSubview:imgview_customacc];
     myCollapseClick.CollapseClickDelegate = self;
     [myCollapseClick reloadCollapseClick];
     
@@ -115,8 +127,8 @@
 }
 
 -(UIColor *)colorForCollapseClickTitleViewAtIndex:(int)index {
-    return [UIColor colorWithRed:0.455 green:0.851 blue:0.996 alpha:1];
-    
+    //return [UIColor colorWithRed:0.455 green:0.851 blue:0.996 alpha:1];
+    return [UIColor colorWithRed:0.494 green:0.804 blue:0.918 alpha:1];
     
 }
 
@@ -128,7 +140,8 @@
 
 -(UIColor *)colorForTitleArrowAtIndex:(int)index {
     //return [UIColor colorWithWhite:0.0 alpha:0.25];
-    return [UIColor whiteColor];
+    //return [UIColor whiteColor];
+     return [UIColor colorWithWhite:0.0 alpha:0.25];
 }
 
 -(void)didClickCollapseClickCellAtIndex:(int)index isNowOpen:(BOOL)open {

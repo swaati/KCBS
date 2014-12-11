@@ -10,12 +10,15 @@
 #import <QuartzCore/QuartzCore.h>
 
 #import "ControlGroup.h"
-@interface FeedbackViewController : UIViewController<UITextFieldDelegate,UITextViewDelegate,UIScrollViewDelegate>
+@interface FeedbackViewController : UIViewController<UITextFieldDelegate,UITextViewDelegate,UIScrollViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
 @property (nonatomic,strong)NSMutableArray *buttonHolderArray;
 @property(nonatomic,strong)UIScrollView *scrollView_feedback;
 @property(nonatomic,strong) UIImageView *imgview_feedback;
 @property(nonatomic,strong)UILabel *feedbackLabel;
 @property(nonatomic,strong)UILabel *ratingLabel;
+
+@property(nonatomic,strong)UITextField *feedbacktype_txt;
+@property(nonatomic,strong)UIPickerView *yourpicker;
 @property(nonatomic,strong)UITextView *txt_comments;
 @property(nonatomic,strong)UITextField *feedbackemail_textField;
 @property(nonatomic,strong) UIButton *submitbtn;

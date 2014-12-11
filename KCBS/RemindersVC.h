@@ -14,5 +14,6 @@
 @property (nonatomic,strong)UILabel *date_lbl;
 @property (nonatomic,strong)UIView *paintView;
 @property (nonatomic,strong)UIImageView *logo;
+@property (nonatomic,strong)UIImageView *imgview_agentreminders;
 
 @end

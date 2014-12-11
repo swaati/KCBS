@@ -40,7 +40,7 @@
     location1.longitude = (double) 82.2250;
 //    // Add the annotation to our map view
    MapAnnotation *newAnnotation = [[MapAnnotation alloc]
-                                   initWithTitle:@"Sapavaram" andCoordinate:location1];
+                                   initWithTitle:@"Sarpavaram" andCoordinate:location1];
 [mapView addAnnotation:newAnnotation];
     CLLocationCoordinate2D location;
     location.latitude = (double) 16.945418;

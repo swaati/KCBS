@@ -17,19 +17,26 @@
 @synthesize recovery_lbl;
 @synthesize agent_view;
 @synthesize name_label;
+@synthesize imgview_agentrecovery;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
   recovery_view=[[UIView alloc]initWithFrame:CGRectMake(0,65, 320,65)];
    recovery_view.backgroundColor=[UIColor colorWithRed:0.965 green:0.506 blue:0.129 alpha:1];
 [self.view addSubview:recovery_view];
-    recovery_lbl= [[UILabel alloc]initWithFrame:CGRectMake(100,20,130,20)];
-    recovery_lbl.font=[UIFont fontWithName:@"Helvetica-Bold" size:16];
+    recovery_lbl= [[UILabel alloc]initWithFrame:CGRectMake(85,20,130,20)];
+    recovery_lbl.font=[UIFont fontWithName:@"Helvetica" size:16];
    recovery_lbl.textColor = [UIColor whiteColor];
    
-    recovery_lbl.text = @"Defaulter Loans";
+    recovery_lbl.text = @"Recovery Visit";
    [recovery_view addSubview:recovery_lbl];
+    imgview_agentrecovery = [[UIImageView alloc]
+                        initWithFrame:CGRectMake(10,12,40,40)];
+    [imgview_agentrecovery setImage:[UIImage imageNamed:@"recoveryVisitSIcon.png"]];
+    [imgview_agentrecovery setContentMode:UIViewContentModeScaleAspectFit];
+    [recovery_view addSubview:imgview_agentrecovery];
     
+
     myCollapseClick.CollapseClickDelegate = self;
     [myCollapseClick reloadCollapseClick];
     
@@ -137,8 +144,8 @@
 // Optional Methods
 
 -(UIColor *)colorForCollapseClickTitleViewAtIndex:(int)index {
-   return [UIColor colorWithRed:0.455 green:0.851 blue:0.996 alpha:1];
-   
+   //return [UIColor colorWithRed:0.455 green:0.851 blue:0.996 alpha:1];
+   return [UIColor colorWithRed:0.494 green:0.804 blue:0.918 alpha:1];
 
 }
 

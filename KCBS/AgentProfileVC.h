@@ -15,6 +15,7 @@
 
 
 @property (nonatomic,strong)UIView *agent_view;
+@property (nonatomic,strong)UIImageView *imgview_agentpro;
 @property (nonatomic,strong)UILabel *name_lbl;
 @property (nonatomic,strong)UILabel *desig_lbl;
 @property(nonatomic,strong)UIButton *btnfirst;
@@ -22,7 +23,6 @@
 @property(nonatomic,strong)UIButton *btnthird;
 @property(nonatomic,strong)UIButton *btnfourth;
 @property (nonatomic, strong) ControlGroup *controlGroup;
-
 //@property (nonatomic,strong)UIView *tabsparent_view;
 
 @end

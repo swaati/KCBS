@@ -21,5 +21,11 @@
 //@property (strong, nonatomic) SecondViewController *secondViewController;
 @property (strong, nonatomic) NSArray * menuarray;
 @property (strong, nonatomic) UIView *logoView;
+@property(nonatomic,strong)UIImageView * img_back;
+@property(nonatomic,strong)UIImageView * img_power;
+@property (nonatomic,strong)UILabel *date_lbl;
+@property(nonatomic,strong)UIView *paintView;
+@property (nonatomic,strong)UIImageView *logo;
+
 
 @end

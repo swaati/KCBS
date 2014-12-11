@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomerAddremindersVC.h"
 
 @interface CustomerReminderVC : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,strong) UITableView *customerdreminders_tv;
@@ -15,6 +16,8 @@
 @property (nonatomic,strong)UILabel *name_lbl;
 @property(nonatomic,strong) UIButton *addreminder_btn;
 @property(nonatomic,strong)NSMutableArray *dataArray;
+@property(nonatomic,strong)UIImageView *imgview_customreminders;
+
 
 
 @end

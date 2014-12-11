@@ -23,5 +23,9 @@
 @property(nonatomic,strong)UITextField *AgentUsernametextField;
 @property(nonatomic,strong)UITextField *AgentPasswordtextField;
 @property(nonatomic,strong) UIButton *agentloginbtn;
+//@property(nonatomic,strong)UIImageView * img_backagent;
+//@property(nonatomic,strong)UIImageView * img_poweragent;
+
+
 
 @end

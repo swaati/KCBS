@@ -17,6 +17,7 @@
 @synthesize customerdetails_array;
 @synthesize customer_view;
 @synthesize name_lbl;
+@synthesize imgview_custompro;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -37,9 +38,14 @@
     name_lbl.font=[UIFont fontWithName:@"Helvetica-Bold" size:16];
     name_lbl.textColor = [UIColor whiteColor];
     name_lbl.backgroundColor = [UIColor clearColor];
-    name_lbl.text = @"name";
+    name_lbl.text = @"Swati Rout";
     [customer_view addSubview:name_lbl];
-   
+    imgview_custompro = [[UIImageView alloc]
+                        initWithFrame:CGRectMake(12,15,40,40)];
+    [imgview_custompro setImage:[UIImage imageNamed:@"agentprofileSIcon.png"]];
+    [imgview_custompro setContentMode:UIViewContentModeScaleAspectFit];
+    [customer_view addSubview:imgview_custompro];
+
     customerdetails_array= @[@"0", @"1", @"2",@"3",@"4"];
     customerdetails_tv =[[UITableView alloc] initWithFrame:CGRectMake(0,131,320,480) style:UITableViewStylePlain];
     [customerdetails_tv setSeparatorStyle: UITableViewCellSeparatorStyleSingleLine];
@@ -90,14 +96,15 @@
         if (indexPath.row==0)
         {
             UILabel *lblCell=[[UILabel alloc]initWithFrame:
-                         CGRectMake(0,10, 200,20)];
+                         CGRectMake(20,10, 280,20)];
             lblCell.numberOfLines = 0;
-            lblCell.font = [UIFont fontWithName:@"Helvetica-Bold" size:15];
+            
+          lblCell.font=[UIFont fontWithName:@"HelveticaNeue" size:13.0];
             lblCell.textColor = [UIColor blackColor];
             //lblCell.backgroundColor = [UIColor purpleColor];
            
 
-            lblCell.text=@"Name:";
+            lblCell.text=@"Name:                               T.BALABRAHMAM";
             //cell.contentView.backgroundColor=[UIColor yellowColor];
            [cell.contentView addSubview:lblCell];
             //        //        //[cell.contentView addSubview:lblCellLine];
@@ -119,43 +126,64 @@
             //
         }
         if(indexPath.row==1){
-            UILabel *father_namelbl=[[UILabel alloc]initWithFrame:CGRectMake(0,10,200,20)];
+            UILabel *lblCell=[[UILabel alloc]initWithFrame:
+                              CGRectMake(20,10, 280,20)];
+            lblCell.numberOfLines = 0;
+            
+            lblCell.font=[UIFont fontWithName:@"HelveticaNeue" size:12.0];
+            
+            UILabel *father_namelbl=[[UILabel alloc]initWithFrame:CGRectMake(20,10,280,20)];
             father_namelbl.numberOfLines = 0;
-            father_namelbl.font = [UIFont fontWithName:@"Helvetica-Bold" size:15];
+            father_namelbl.font = [UIFont fontWithName:@"Helvetica" size:15];
             father_namelbl.textColor = [UIColor blackColor];
-            father_namelbl.text=@"Father/Husband Name:";
+            father_namelbl.text=@"Father/Husband Name:SURACHARULU";
             [cell.contentView addSubview:father_namelbl];
         }
         if(indexPath.row==2){
-            UILabel *income_lbl=[[UILabel alloc]initWithFrame:CGRectMake(0,10,200,20)];
+            UILabel *lblCell=[[UILabel alloc]initWithFrame:
+                              CGRectMake(20,10, 280,20)];
+            lblCell.numberOfLines = 0;
+            
+            lblCell.font=[UIFont fontWithName:@"HelveticaNeue" size:12.0];
+            UILabel *income_lbl=[[UILabel alloc]initWithFrame:CGRectMake(20,10,280,20)];
             income_lbl.numberOfLines = 0;
-            income_lbl.font = [UIFont fontWithName:@"Helvetica-Bold" size:15];
+            income_lbl.font = [UIFont fontWithName:@"Helvetica" size:15];
             income_lbl.textColor = [UIColor blackColor];
-            income_lbl.text=@"Annual Income:";
+            income_lbl.text=@"Annual Income:             Rs 255000";
             [cell.contentView addSubview:income_lbl];
         }
         if(indexPath.row==3){
-            UILabel *number_lbl=[[UILabel alloc]initWithFrame:CGRectMake(0,10,200,20)];
+            UILabel *lblCell=[[UILabel alloc]initWithFrame:
+                              CGRectMake(20,10, 280,20)];
+            lblCell.numberOfLines = 0;
+            
+            lblCell.font=[UIFont fontWithName:@"HelveticaNeue" size:12.0];
+            UILabel *number_lbl=[[UILabel alloc]initWithFrame:CGRectMake(20,10,280,20)];
             number_lbl.numberOfLines = 0;
-            number_lbl.font = [UIFont fontWithName:@"Helvetica-Bold" size:15];
+            number_lbl.font = [UIFont fontWithName:@"Helvetica" size:15];
            number_lbl.textColor = [UIColor blackColor];
-            number_lbl.text=@"Contact Number:";
+            number_lbl.text=@"Contact Number:           +9123333354654";
             [cell.contentView addSubview:number_lbl];
         }
+//        if(indexPath.row==4){
+//            UILabel *address_lbl=[[UILabel alloc]initWithFrame:CGRectMake(0,10,200,20)];
+//            address_lbl.numberOfLines = 0;
+//            address_lbl.font = [UIFont fontWithName:@"Helvetica" size:15];
+//           address_lbl.textColor = [UIColor blackColor];
+//            address_lbl.text=@"Contact Number:bdfhbjdrfnjdrkngvkdfngvklmjdflkgmkgvfn v,mcnx,vweewrwerkeowrkfewmfkdmfkdvkcnvncdnvfivdcvcvcvncnm kmkmlmkmkdsfdfdfdmkcmkxm kmvcvcxvcxvcxvcvcvcvcvcvc";
+//            [cell.contentView addSubview:address_lbl];
+//        }
         if(indexPath.row==4){
-            UILabel *address_lbl=[[UILabel alloc]initWithFrame:CGRectMake(0,10,200,20)];
-            address_lbl.numberOfLines = 0;
-            address_lbl.font = [UIFont fontWithName:@"Helvetica-Bold" size:15];
-           address_lbl.textColor = [UIColor blackColor];
-            address_lbl.text=@"Contact Number:bdfhbjdrfnjdrkngvkdfngvklmjdflkgmkgvfn v,mcnx,vweewrwerkeowrkfewmfkdmfkdvkcnvncdnvfivdcvcvcvncnm kmkmlmkmkdsfdfdfdmkcmkxm kmvcvcxvcxvcxvcvcvcvcvcvc";
-            [cell.contentView addSubview:address_lbl];
-        }
-        if(indexPath.row==5){
-            UILabel *status_lbl=[[UILabel alloc]initWithFrame:CGRectMake(0,10,200,20)];
+            UILabel *lblCell=[[UILabel alloc]initWithFrame:
+                              CGRectMake(20,10, 280,20)];
+            lblCell.numberOfLines = 0;
+            
+            lblCell.font=[UIFont fontWithName:@"HelveticaNeue" size:12.0];
+            UILabel *status_lbl=[[UILabel alloc]initWithFrame:CGRectMake(20,10,280,20)];
             status_lbl.numberOfLines = 0;
-            status_lbl.font = [UIFont fontWithName:@"Helvetica-Bold" size:15];
+            status_lbl.font = [UIFont fontWithName:@"Helvetica" size:15];
             status_lbl.textColor = [UIColor blackColor];
-            status_lbl.text=@"Status:";
+            status_lbl.text=@"Status:                            RETIFIED";
             [cell.contentView addSubview:status_lbl];
         }
 

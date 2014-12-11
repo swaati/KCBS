@@ -18,6 +18,8 @@
 @synthesize feedbackLabel;
 @synthesize ratingLabel;
 @synthesize txt_comments;
+@synthesize feedbacktype_txt;
+@synthesize yourpicker;
 @synthesize feedbackemail_textField;
 @synthesize submitbtn;
 @synthesize btn1;
@@ -57,9 +59,9 @@
     buttonHolderArray = [[NSMutableArray alloc] init];
     imgview_feedback = [[UIImageView alloc]
                      initWithFrame:CGRectMake(115,50, 100,100)];
-    [imgview_feedback setImage:[UIImage imageNamed:@"round.png"]];
+    [imgview_feedback setImage:[UIImage imageNamed:@"feedbackBIcon.png"]];
     [imgview_feedback setContentMode:UIViewContentModeScaleAspectFit];
-    [scrollView_feedback addSubview:imgview_feedback];
+    [self.view addSubview:imgview_feedback];
     feedbackLabel = [[UILabel alloc]initWithFrame:
                   CGRectMake(115,120, 280, 80)];
     feedbackLabel.numberOfLines = 0;
@@ -67,16 +69,16 @@
     feedbackLabel.textColor = [UIColor colorWithRed:0.302 green:0.569 blue:0.749 alpha:1];
     feedbackLabel.backgroundColor = [UIColor clearColor];
     feedbackLabel.text = @"FEEDBACK";
-    [scrollView_feedback addSubview:feedbackLabel];
-    ratingLabel= [[UILabel alloc]initWithFrame:
-                   CGRectMake(50,140, 280, 80)];
-    ratingLabel.numberOfLines = 0;
-    ratingLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
-    ratingLabel.textColor = [UIColor blackColor];
-    ratingLabel.backgroundColor = [UIColor clearColor];
-    ratingLabel.text = @"Please rate your experience with this app";
-    [scrollView_feedback addSubview:ratingLabel];
-    
+    [self.view addSubview:feedbackLabel];
+//    ratingLabel= [[UILabel alloc]initWithFrame:
+//                   CGRectMake(50,140, 280, 80)];
+//    ratingLabel.numberOfLines = 0;
+//    ratingLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
+//    ratingLabel.textColor = [UIColor blackColor];
+//    ratingLabel.backgroundColor = [UIColor clearColor];
+//    ratingLabel.text = @"Please rate your experience with this app";
+//    [scrollView_feedback addSubview:ratingLabel];
+//    
 
     btn1 = [UIButton buttonWithType: UIButtonTypeCustom];
     btn1.tag = 1;
@@ -93,7 +95,7 @@
     [self.controlGroup addControl:btn1];
     [buttonHolderArray addObject:btn1];
    // [btn1 setBackgroundColor: [UIColor lightGrayColor]];
-    [btn1 setFrame:CGRectMake(15,200,30,30)];
+    [btn1 setFrame:CGRectMake(20,200,30,30)];
     
     [scrollView_feedback addSubview:btn1];
     btn2 = [UIButton buttonWithType: UIButtonTypeCustom];
@@ -112,7 +114,7 @@
     [buttonHolderArray addObject:btn2];
     [self.controlGroup addControl:btn2];
     //[btn2 setBackgroundColor: [UIColor lightGrayColor]];
-    [btn2 setFrame:CGRectMake(60,200,30,30)];
+    [btn2 setFrame:CGRectMake(75,200,30,30)];
     
     [scrollView_feedback addSubview:btn2];
     btn3 = [UIButton buttonWithType: UIButtonTypeCustom];
@@ -132,7 +134,7 @@
     [buttonHolderArray addObject:btn3];
     [self.controlGroup addControl:btn3];
     //[btn3 setBackgroundColor: [UIColor lightGrayColor]];
-    [btn3 setFrame:CGRectMake(120,200,30,30)];
+    [btn3 setFrame:CGRectMake(135,200,30,30)];
     [scrollView_feedback addSubview:btn3];
     btn4 = [UIButton buttonWithType: UIButtonTypeCustom];
     btn4.tag =4;
@@ -152,7 +154,7 @@
     [buttonHolderArray addObject:btn4];
     [self.controlGroup addControl:btn4];
     //[btn4 setBackgroundColor: [UIColor lightGrayColor]];
-    [btn4 setFrame:CGRectMake(180,200,30,30)];
+    [btn4 setFrame:CGRectMake(195,200,30,30)];
     [scrollView_feedback addSubview:btn4];
     btn5 = [UIButton buttonWithType: UIButtonTypeCustom];
     btn5.tag =5;
@@ -170,11 +172,53 @@
     [buttonHolderArray addObject:btn5];
     [self.controlGroup addControl:btn5];
     //[btn5 setBackgroundColor: [UIColor lightGrayColor]];
-    [btn5 setFrame:CGRectMake(240,200,30,30)];
+    [btn5 setFrame:CGRectMake(260,200,30,30)];
     [scrollView_feedback addSubview:btn5];
     NSLog(@"is %d",[buttonHolderArray count]);
+    
+    
+    
+    
+    
+    
+    feedbacktype_txt =[[UITextField  alloc] initWithFrame:
+                              CGRectMake(20, 240, 280, 30)];
+    feedbacktype_txt.borderStyle = UITextBorderStyleRoundedRect;
+    feedbacktype_txt.contentVerticalAlignment =UIControlContentVerticalAlignmentCenter;
+    [feedbacktype_txt setFont:[UIFont boldSystemFontOfSize:12]];
+    //txt_comments.placeholder = @"User Name";
+    
+    feedbacktype_txt.delegate = self;
+    feedbacktype_txt.autocorrectionType = UITextAutocorrectionTypeNo;
+    feedbacktype_txt.returnKeyType = UIReturnKeyDone;
+    feedbacktype_txt.layer.borderWidth = 0.5f;
+    feedbacktype_txt.layer.borderColor = [[UIColor grayColor] CGColor];
+    feedbacktype_txt.clearButtonMode = UITextFieldViewModeWhileEditing;
+    [scrollView_feedback addSubview:feedbacktype_txt];
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
     txt_comments=[[UITextView  alloc] initWithFrame:
-                  CGRectMake(20, 250, 280, 60)];
+                  CGRectMake(20, 280, 280, 60)];
         // txt_comments.borderStyle = UITextBorderStyleRoundedRect;
     // txt_comments.contentVerticalAlignment =UIControlContentVerticalAlignmentCenter;
     [txt_comments setFont:[UIFont boldSystemFontOfSize:12]];
@@ -188,7 +232,7 @@
     //txt_comments.clearButtonMode = UITextFieldViewModeWhileEditing;
     [scrollView_feedback addSubview:txt_comments];
     feedbackemail_textField =[[UITextField  alloc] initWithFrame:
-                            CGRectMake(20, 320, 280, 30)];
+                            CGRectMake(20, 350, 280, 30)];
     feedbackemail_textField.borderStyle = UITextBorderStyleRoundedRect;
     feedbackemail_textField.contentVerticalAlignment =UIControlContentVerticalAlignmentCenter;
     [feedbackemail_textField setFont:[UIFont boldSystemFontOfSize:12]];
@@ -202,9 +246,11 @@
     feedbackemail_textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     [scrollView_feedback addSubview:feedbackemail_textField];
     submitbtn = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    submitbtn.layer.cornerRadius = 5;
     //submitbtn.layer.cornerRadius = 5;
     //agentloginbtn.layer.borderWidth = 1;
-    [submitbtn setBackgroundColor: [UIColor colorWithRed:0.976 green:0.459 blue:0.016 alpha:1] ];
+    [submitbtn setBackgroundColor: [UIColor colorWithRed:0.302 green:0.569 blue:0.749 alpha:1]];
+    //[submitbtn setBackgroundColor: [UIColor colorWithRed:0.976 green:0.459 blue:0.016 alpha:1] ];
     [submitbtn setTitleColor:[UIColor whiteColor] forState:
      UIControlStateNormal];
     //sets background image for normal state
@@ -218,12 +264,24 @@
     [submitbtn addTarget:self
                      action:@selector(agentloginbtn_Clicked)
             forControlEvents:UIControlEventTouchUpInside];
-    [submitbtn setFrame:CGRectMake(20, 360, 280, 30)];
-    [submitbtn setTitle:@"Submit" forState:UIControlStateNormal];
+    [submitbtn setFrame:CGRectMake(20, 390, 280, 30)];
+    [submitbtn setTitle:@"SUBMIT" forState:UIControlStateNormal];
     [scrollView_feedback addSubview:submitbtn];
 
 
 }
+- (BOOL) textFieldShouldBeginEditing:(UITextView *)textView
+{
+yourpicker.frame = CGRectMake(0, 500, yourpicker.frame.size.width,    yourpicker.frame.size.height);
+[UIView beginAnimations:nil context:NULL];
+[UIView setAnimationDuration:.50];
+[UIView setAnimationDelegate:self];
+yourpicker.frame = CGRectMake(0, 200, yourpicker.frame.size.width, yourpicker.frame.size.height);
+[self.view addSubview:yourpicker];
+[UIView commitAnimations];
+return NO;
+}
+
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
     
     if([text isEqualToString:@"\n"]) {

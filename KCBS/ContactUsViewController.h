@@ -17,8 +17,10 @@
 @property(nonatomic,strong)UILabel *mng_label2;
 @property(nonatomic,strong)UILabel *add_label;
 @property(nonatomic,strong)UILabel *add_label2;
+@property(nonatomic,strong)UILabel *add_label3;
 @property(nonatomic,strong)UILabel *door_label;
 @property(nonatomic,strong)UILabel *door_label2;
+@property(nonatomic,strong)UILabel *door_label3;
 @property(nonatomic,strong)UILabel *ph_label;
 @property(nonatomic,strong)UILabel *ph_label2;
 @property(nonatomic,strong)UILabel *branch_label;

@@ -72,22 +72,22 @@
     [self.view addSubview:scrollView_customer];
     //imageview
     imgview_customer = [[UIImageView alloc]
-                     initWithFrame:CGRectMake(115,100, 100,100)];
-    [imgview_customer setImage:[UIImage imageNamed:@"round.png"]];
+                     initWithFrame:CGRectMake(115,70, 100,100)];
+    [imgview_customer setImage:[UIImage imageNamed:@"custLoginBIcon.png"]];
     [imgview_customer setContentMode:UIViewContentModeScaleAspectFit];
-    [scrollView_customer addSubview:imgview_customer];
+    [self.view addSubview:imgview_customer];
     ///label
     customerLabel = [[UILabel alloc]initWithFrame:
-                  CGRectMake(30, 180, 280, 80)];
+                  CGRectMake(58, 160, 280, 80)];
     customerLabel.numberOfLines = 0;
-    customerLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:16];
+    customerLabel.font = [UIFont fontWithName:@"Helvetica" size:14];
     customerLabel.textColor = [UIColor colorWithRed:0.302 green:0.569 blue:0.749 alpha:1];
     customerLabel.backgroundColor = [UIColor clearColor];
     customerLabel.text = @"WELCOME TO CUSTOMER LOGIN";
-    [scrollView_customer addSubview:customerLabel];
+    [self.view addSubview:customerLabel];
     ///agentusername
     customerUsernametextField = [[UITextField  alloc] initWithFrame:
-                              CGRectMake(20, 250, 280, 30)];
+                              CGRectMake(20, 220, 280, 30)];
     customerUsernametextField.borderStyle = UITextBorderStyleRoundedRect;
     customerUsernametextField.contentVerticalAlignment =UIControlContentVerticalAlignmentCenter;
     [customerUsernametextField setFont:[UIFont boldSystemFontOfSize:12]];
@@ -99,7 +99,7 @@
     customerUsernametextField.clearButtonMode = UITextFieldViewModeWhileEditing;
     ////agentpassword
     customerPasswordtextField = [[UITextField  alloc] initWithFrame:
-                              CGRectMake(20, 300, 280, 30)];
+                              CGRectMake(20, 280, 280, 30)];
     customerPasswordtextField.borderStyle = UITextBorderStyleRoundedRect;
     customerPasswordtextField.contentVerticalAlignment =UIControlContentVerticalAlignmentCenter;
     [customerPasswordtextField setFont:[UIFont boldSystemFontOfSize:12]];
@@ -130,7 +130,7 @@
     [customerloginbtn addTarget:self
                       action:@selector(customerloginbtn_Clicked)
             forControlEvents:UIControlEventTouchUpInside];
-    [customerloginbtn setFrame:CGRectMake(20, 350, 280, 30)];
+    [customerloginbtn setFrame:CGRectMake(20, 330, 280, 30)];
     [customerloginbtn setTitle:@"LOGIN ME" forState:UIControlStateNormal];
     [scrollView_customer addSubview:customerloginbtn];
     
@@ -168,21 +168,21 @@
         [customer_tabViewControllers addObject:customer_vc];
         customer_vc.tabBarItem =
         [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"View Profile", nil)
-                                      image:nil
+                                      image:[UIImage imageNamed:@"profileIcon_Small.png"]
                                         tag:1];
         CustomerAccountSumVC *cav=[[CustomerAccountSumVC alloc]init];
         [customer_tabViewControllers addObject:cav];
         
         cav.tabBarItem =
         [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Accoount Summary", nil)
-                                      image:nil
+                                      image:[UIImage imageNamed:@"accSummaryIcon_Small.png"]
                                         tag:2];
         CustomerReminderVC *crv=[[CustomerReminderVC alloc]init];
         
          [customer_tabViewControllers addObject:crv];
         crv.tabBarItem =
         [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Reminders", nil)
-                                      image:nil
+                                      image:[UIImage imageNamed:@"remindersIcon_Small.png"]
                                         tag:3];
         
         //           DefaulterLoansVC *defaulterloans_vc=[[DefaulterLoansVC alloc]init];

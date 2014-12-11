@@ -23,6 +23,8 @@
 @synthesize AgentUsernametextField;
 @synthesize AgentPasswordtextField;
 @synthesize agentloginbtn;
+//@synthesize img_backagent;
+//@synthesize img_poweragent;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -36,6 +38,25 @@
 {
     [super viewDidLoad];
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"small.png"]];
+//    UIBarButtonItem *leftagent=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"backButton.png"]style:UIBarButtonItemStylePlain
+//                                                         target:self
+//                                                         action:nil];
+//    //left.customView=[UIImageView imageNamed:@"backButton.png"];
+//    img_backagent = [[UIImageView alloc]
+//                initWithFrame:CGRectMake(12,8,20,20)];
+//    [img_backagent setImage:[UIImage imageNamed:@"backButton.png"]];
+//    leftagent.customView=img_backagent;
+//    self.navigationItem.leftBarButtonItem = leftagent;
+//    UIBarButtonItem *rightagent=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"logoutIcon.png"]style:UIBarButtonItemStylePlain
+//                                                          target:self
+//                                                          action:nil];
+//    img_poweragent= [[UIImageView alloc]
+//                initWithFrame:CGRectMake(12,8,20,20)];
+//    [img_poweragent setImage:[UIImage imageNamed:@"logoutIcon.png"]];
+//    rightagent.customView=img_poweragent;
+//    self.navigationItem.rightBarButtonItem = rightagent;
+//    
+
     //self.title=@"Agent LogIn";
     /////parent scrollview
     scrollView_agent = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320,480)];
@@ -48,22 +69,23 @@
     [self.view addSubview:scrollView_agent];
     //imageview
     imgview_agent = [[UIImageView alloc]
-                            initWithFrame:CGRectMake(115,100, 100,100)];
-    [imgview_agent setImage:[UIImage imageNamed:@"round.png"]];
+                            initWithFrame:CGRectMake(115,70, 100,100)];
+    [imgview_agent setImage:[UIImage imageNamed:@"agentLoginBIcon.png"]];
     [imgview_agent setContentMode:UIViewContentModeScaleAspectFit];
-    [scrollView_agent addSubview:imgview_agent];
+    [self.view addSubview:imgview_agent];
     ///label
    agentLabel = [[UILabel alloc]initWithFrame:
-                       CGRectMake(60, 180, 280, 80)];
+                 
+CGRectMake(58, 160, 280, 80)];
     agentLabel.numberOfLines = 0;
-   agentLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:16];
+   agentLabel.font = [UIFont fontWithName:@"Helvetica" size:14];
     agentLabel.textColor = [UIColor colorWithRed:0.302 green:0.569 blue:0.749 alpha:1];
     agentLabel.backgroundColor = [UIColor clearColor];
        agentLabel.text = @"WELCOME TO AGENT LOGIN";
-   [scrollView_agent addSubview:agentLabel];
+   [self.view addSubview:agentLabel];
     ///agentusername
    AgentUsernametextField = [[UITextField  alloc] initWithFrame:
-                              CGRectMake(20, 250, 280, 30)];
+                              CGRectMake(20, 220, 280, 30)];
     AgentUsernametextField.borderStyle = UITextBorderStyleRoundedRect;
     AgentUsernametextField.contentVerticalAlignment =UIControlContentVerticalAlignmentCenter;
     [AgentUsernametextField setFont:[UIFont boldSystemFontOfSize:12]];
@@ -75,7 +97,7 @@
     AgentUsernametextField.clearButtonMode = UITextFieldViewModeWhileEditing;
     ////agentpassword
    AgentPasswordtextField = [[UITextField  alloc] initWithFrame:
-                                           CGRectMake(20, 300, 280, 30)];
+                                           CGRectMake(20, 280, 280, 30)];
     AgentPasswordtextField.borderStyle = UITextBorderStyleRoundedRect;
     AgentPasswordtextField.contentVerticalAlignment =UIControlContentVerticalAlignmentCenter;
     [AgentPasswordtextField setFont:[UIFont boldSystemFontOfSize:12]];
@@ -106,7 +128,7 @@
     [agentloginbtn addTarget:self
                  action:@selector(agentloginbtn_Clicked)
        forControlEvents:UIControlEventTouchUpInside];
-    [agentloginbtn setFrame:CGRectMake(20, 350, 280, 30)];
+    [agentloginbtn setFrame:CGRectMake(20, 330, 280, 30)];
     [agentloginbtn setTitle:@"LOGIN ME" forState:UIControlStateNormal];
     [scrollView_agent addSubview:agentloginbtn];
     
@@ -184,14 +206,14 @@
            [tabViewControllers addObject:agent_vc];
            agent_vc.tabBarItem =
            [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"AgentAccount", nil)
-                                         image:nil
+                                     image:[UIImage imageNamed:@"profileIcon_Small.png"]
                                            tag:1];
            ViewController *dy=[[ViewController alloc]init];
                    [tabViewControllers addObject:dy];
          
                      dy.tabBarItem =
                   [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"DefaulterLoans", nil)
-                                                image:nil
+                                                image:[UIImage imageNamed:@"defaulterLoanIcon_Small.png"]
                                                    tag:2];
 
 //           DefaulterLoansVC *defaulterloans_vc=[[DefaulterLoansVC alloc]init];
@@ -204,17 +226,17 @@
            RecoveryVisitVC *recoveryvisit_vc=[[RecoveryVisitVC alloc]init];
            [tabViewControllers addObject:recoveryvisit_vc];
            recoveryvisit_vc.tabBarItem= [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"RecoveryVisit", nil)
-                                                                      image:nil
+                image:[UIImage imageNamed:@"recoveryVisitIcon_Small.png"]
                                                                         tag:3];
            LoanViewVC *loanview_vc=[[LoanViewVC alloc]init];
            [tabViewControllers addObject:loanview_vc];
            loanview_vc.tabBarItem=[[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"LoanView", nil)
-                                                                image:nil
+            image:[UIImage imageNamed:@"loanViewIcon_Small.png"]
                                                                   tag:4];
            RemindersVC *reminders_vc=[[RemindersVC alloc]init];
            [tabViewControllers addObject:reminders_vc];
            reminders_vc.tabBarItem=[[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Reminders", nil)
-                                                                image:nil
+                                                                 image:[UIImage imageNamed:@"remindersIcon_Small.png"]
                                                                   tag:5];
 
            //    thirdNavVC.tabBarItem =

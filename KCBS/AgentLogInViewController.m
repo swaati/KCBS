@@ -60,6 +60,7 @@
     //self.title=@"Agent LogIn";
     /////parent scrollview
     scrollView_agent = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320,480)];
+    //scrollView_agent.backgroundColor=[UIColor orangeColor];
     scrollView_agent.backgroundColor = [UIColor clearColor];
     scrollView_agent.scrollEnabled = YES;
     scrollView_agent.pagingEnabled = YES;

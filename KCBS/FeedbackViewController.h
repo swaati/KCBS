@@ -16,12 +16,16 @@
 @property(nonatomic,strong) UIImageView *imgview_feedback;
 @property(nonatomic,strong)UILabel *feedbackLabel;
 @property(nonatomic,strong)UILabel *ratingLabel;
-
+@property(nonatomic,strong)UILabel *type;
+@property(nonatomic,strong)UILabel *comm_lbl;
+@property(nonatomic,strong)UILabel *email_lbl;
 @property(nonatomic,strong)UITextField *feedbacktype_txt;
-@property(nonatomic,strong)UIPickerView *yourpicker;
+
 @property(nonatomic,strong)UITextView *txt_comments;
 @property(nonatomic,strong)UITextField *feedbackemail_textField;
 @property(nonatomic,strong) UIButton *submitbtn;
+@property(nonatomic,strong)NSArray *pickerArray;
+@property(nonatomic,strong)UIPickerView *type_picker;
 
 //@property(nonatomic,strong)UIButton *btn1;
 //@property(nonatomic,strong)UIButton *btn2;

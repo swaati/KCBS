@@ -23,11 +23,11 @@
 @property(nonatomic,strong)UITextField *feedbackemail_textField;
 @property(nonatomic,strong) UIButton *submitbtn;
 
-@property(nonatomic,strong)UIButton *btn1;
-@property(nonatomic,strong)UIButton *btn2;
-@property(nonatomic,strong)UIButton *btn3;
-@property(nonatomic,strong)UIButton *btn4;
-@property(nonatomic,strong)UIButton *btn5;
+//@property(nonatomic,strong)UIButton *btn1;
+//@property(nonatomic,strong)UIButton *btn2;
+//@property(nonatomic,strong)UIButton *btn3;
+//@property(nonatomic,strong)UIButton *btn4;
+//@property(nonatomic,strong)UIButton *btn5;
 @property (nonatomic, strong) ControlGroup *controlGroup;
 @end
 

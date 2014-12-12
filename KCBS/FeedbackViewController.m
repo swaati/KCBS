@@ -215,11 +215,26 @@
    type_picker = [[UIPickerView alloc]init];
     type_picker.dataSource = self;
     type_picker.delegate = self;
+    [type_picker setBackgroundColor:[UIColor clearColor]];
     type_picker.showsSelectionIndicator = YES;
-    
+    type_picker.tintColor=[UIColor orangeColor];
     [self.feedbacktype_txt setInputView:type_picker];
-
+UIBarButtonItem *flexSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc]
+                                   initWithTitle:@"Done" style:UIBarButtonItemStyleDone
+                                   target:self action:@selector(done:)];
+    doneButton.tintColor=[UIColor orangeColor];
+    UIToolbar *toolBar = [[UIToolbar alloc]initWithFrame:
+                          CGRectMake(0, self.view.frame.size.height-
+                                     type_picker.frame.size.height-50, 320, 50)];
+    [toolBar setBarStyle:UIBarStyleDefault];
     
+    NSArray *toolbarItems = [NSArray arrayWithObjects:
+                             flexSpace,doneButton,nil];
+    [toolBar setItems:toolbarItems];
+    
+    self.feedbacktype_txt.inputAccessoryView = toolBar;
+
     
     
     
@@ -342,6 +357,11 @@ numberOfRowsInComponent:(NSInteger)component{
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:
 (NSInteger)row forComponent:(NSInteger)component{
     return [pickerArray objectAtIndex:row];
+}
+- (void)done:(id)sender {
+    
+    [type_picker removeFromSuperview];
+    [self.feedbacktype_txt resignFirstResponder];
 }
 - (void)didReceiveMemoryWarning
 {

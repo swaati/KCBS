@@ -7,6 +7,11 @@
 //
 
 #import "CustomerProfileVC.h"
+#import "MVYMenuViewController.h"
+#import "MVYContentViewController.h"
+#import "MVYSideMenuOptions.h"
+#import "MVYSideMenuController.h"
+
 
 @interface CustomerProfileVC ()
 
@@ -18,6 +23,7 @@
 @synthesize customer_view;
 @synthesize name_lbl;
 @synthesize imgview_custompro;
+@synthesize img_drawer;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -32,6 +38,38 @@
     [super viewDidLoad];
     ///self.view.backgroundColor=[UIColor colorWithRed:0.325 green:0.816 blue:1 alpha:1];
      self.parentViewController.navigationItem.titleView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"small.png"]];
+    UIBarButtonItem *right=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"logoutIcon.png"]style:UIBarButtonItemStylePlain
+                                                          target:self
+                                                          action:@selector(clicked)];
+    img_drawer= [[UIImageView alloc]
+                initWithFrame:CGRectMake(12,8,20,20)];
+    [img_drawer setImage:[UIImage imageNamed:@"logoutIcon.png"]];
+   // right.customView=img_drawer;
+    self.parentViewController.navigationItem.rightBarButtonItem = right;
+    
+
+    
+    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    //self.window.rootViewController = sideMenuController;
+    
+   /// [self.window makeKeyAndVisible];
+    //imgCatchFromCamera=[[UIImageView alloc]init];
+    
+    //return YES;
+
+    
+    
+    
+    
+    
+//       UIBarButtonItem *myButton = [[UIBarButtonItem alloc] initWithTitle:@"Next"
+//                                                                     style:UIBarButtonItemStylePlain
+//                                                                    target:self
+//                                                                    action:@selector(nextScreen:)];
+//     [self.parentViewController.navigationItem setRightBarButtonItem:myButton];
+//    
+
     customer_view=[[UIView alloc]initWithFrame:CGRectMake(0,65, 320,65)];
     customer_view.backgroundColor=[UIColor colorWithRed:0.965 green:0.506 blue:0.129 alpha:1];;
     [self.view addSubview:customer_view];
@@ -56,6 +94,26 @@
     [self.view addSubview:customerdetails_tv];
 
     // Do any additional setup after loading the view.
+}
+-(void)clicked{
+    MVYMenuViewController *menuVC = [[MVYMenuViewController alloc] initWithNibName:@"MVYMenuViewController" bundle:nil];
+    MVYContentViewController *contentVC = [[MVYContentViewController alloc] initWithNibName:@"MVYContentViewController" bundle:nil];
+    UINavigationController *contentNavigationController = [[UINavigationController alloc] initWithRootViewController:contentVC];
+    MVYSideMenuOptions *options = [[MVYSideMenuOptions alloc] init];
+    options.contentViewScale = 1.0;
+    options.contentViewOpacity = 0.05;
+    options.shadowOpacity = 0.0;
+    options.panFromBezel = NO;
+    options.panFromNavBar = YES;
+    options.animationDuration = 0.3f;
+    MVYSideMenuController *sideMenuController = [[MVYSideMenuController alloc] initWithMenuViewController:menuVC
+                                                                                    contentViewController:contentNavigationController
+                                                                                                  options:options];
+    sideMenuController.menuFrame = CGRectMake(0, 64.0, 220.0, 400);
+    
+    [self.navigationController pushViewController:sideMenuController animated:YES];
+    sideMenuController = nil;
+    NSLog(@"slider is clicked");
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     

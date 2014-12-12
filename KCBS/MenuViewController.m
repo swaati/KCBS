@@ -93,7 +93,7 @@
 //    connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
 //
     menuarray= @[@"AGENT LOGIN", @"CUSTOMER LOGIN", @"BRANCH LOCATOR",@"CONTACT US",@"FEEDBACK",@"PRODUCT INFO",@"SHARE IT WITH FRIENDS",@"TERMS AND CONDITIONS"];
-    menuTableView =[[UITableView alloc] initWithFrame:CGRectMake(0,10,320,576) style:UITableViewStylePlain];
+    menuTableView =[[UITableView alloc] initWithFrame:CGRectMake(0,10,320,800) style:UITableViewStylePlain];
     [menuTableView setSeparatorStyle: UITableViewCellSeparatorStyleNone];
     menuTableView.dataSource = self;
     menuTableView.delegate = self;

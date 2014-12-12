@@ -64,6 +64,19 @@
 		C01170641A20AD3B000A88CC /* magnifying4.png in Resources */ = {isa = PBXBuildFile; fileRef = C011705E1A20AD3B000A88CC /* magnifying4.png */; };
 		C01170661A20AD5D000A88CC /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = C01170651A20AD5D000A88CC /* green.png */; };
 		C01170681A20AD64000A88CC /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = C01170671A20AD64000A88CC /* red.png */; };
+		C012A8351A3ACD2600123B54 /* MVYSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = C012A82C1A3ACD2600123B54 /* MVYSideMenuController.m */; };
+		C012A8361A3ACD2600123B54 /* MVYSideMenuOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = C012A82E1A3ACD2600123B54 /* MVYSideMenuOptions.m */; };
+		C012A8371A3ACD2600123B54 /* MVYMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C012A8301A3ACD2600123B54 /* MVYMenuViewController.m */; };
+		C012A8381A3ACD2600123B54 /* MVYMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C012A8311A3ACD2600123B54 /* MVYMenuViewController.xib */; };
+		C012A8391A3ACD2600123B54 /* MVYContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C012A8331A3ACD2600123B54 /* MVYContentViewController.m */; };
+		C012A83A1A3ACD2600123B54 /* MVYContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C012A8341A3ACD2600123B54 /* MVYContentViewController.xib */; };
+		C012A83C1A3AED8500123B54 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C012A83B1A3AED8500123B54 /* QuartzCore.framework */; };
+		C012A8411A3B009700123B54 /* ProductInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C012A83F1A3B009700123B54 /* ProductInfoVC.m */; };
+		C012A8421A3B009700123B54 /* ProductInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C012A8401A3B009700123B54 /* ProductInfoVC.xib */; };
+		C012A8471A3B00E300123B54 /* SharefriendsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C012A8451A3B00E300123B54 /* SharefriendsVC.m */; };
+		C012A8481A3B00E300123B54 /* SharefriendsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C012A8461A3B00E300123B54 /* SharefriendsVC.xib */; };
+		C012A84D1A3B011200123B54 /* TermsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C012A84B1A3B011200123B54 /* TermsVC.m */; };
+		C012A84E1A3B011200123B54 /* TermsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C012A84C1A3B011200123B54 /* TermsVC.xib */; };
 		C012F5AA1A1F39C000893ED3 /* ControlGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = C012F5A91A1F39C000893ED3 /* ControlGroup.m */; };
 		C013CB321A19C8710073DA65 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C013CB311A19C8710073DA65 /* MapKit.framework */; };
 		C013CB341A19C87E0073DA65 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C013CB331A19C87E0073DA65 /* CoreLocation.framework */; };
@@ -180,6 +193,26 @@
 		C011705E1A20AD3B000A88CC /* magnifying4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magnifying4.png; sourceTree = "<group>"; };
 		C01170651A20AD5D000A88CC /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 		C01170671A20AD64000A88CC /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
+		C012A82B1A3ACD2600123B54 /* MVYSideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVYSideMenuController.h; sourceTree = "<group>"; };
+		C012A82C1A3ACD2600123B54 /* MVYSideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVYSideMenuController.m; sourceTree = "<group>"; };
+		C012A82D1A3ACD2600123B54 /* MVYSideMenuOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVYSideMenuOptions.h; sourceTree = "<group>"; };
+		C012A82E1A3ACD2600123B54 /* MVYSideMenuOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVYSideMenuOptions.m; sourceTree = "<group>"; };
+		C012A82F1A3ACD2600123B54 /* MVYMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVYMenuViewController.h; sourceTree = "<group>"; };
+		C012A8301A3ACD2600123B54 /* MVYMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVYMenuViewController.m; sourceTree = "<group>"; };
+		C012A8311A3ACD2600123B54 /* MVYMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MVYMenuViewController.xib; sourceTree = "<group>"; };
+		C012A8321A3ACD2600123B54 /* MVYContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVYContentViewController.h; sourceTree = "<group>"; };
+		C012A8331A3ACD2600123B54 /* MVYContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVYContentViewController.m; sourceTree = "<group>"; };
+		C012A8341A3ACD2600123B54 /* MVYContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MVYContentViewController.xib; sourceTree = "<group>"; };
+		C012A83B1A3AED8500123B54 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C012A83E1A3B009700123B54 /* ProductInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductInfoVC.h; sourceTree = "<group>"; };
+		C012A83F1A3B009700123B54 /* ProductInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductInfoVC.m; sourceTree = "<group>"; };
+		C012A8401A3B009700123B54 /* ProductInfoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductInfoVC.xib; sourceTree = "<group>"; };
+		C012A8441A3B00E300123B54 /* SharefriendsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharefriendsVC.h; sourceTree = "<group>"; };
+		C012A8451A3B00E300123B54 /* SharefriendsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharefriendsVC.m; sourceTree = "<group>"; };
+		C012A8461A3B00E300123B54 /* SharefriendsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharefriendsVC.xib; sourceTree = "<group>"; };
+		C012A84A1A3B011200123B54 /* TermsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TermsVC.h; sourceTree = "<group>"; };
+		C012A84B1A3B011200123B54 /* TermsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TermsVC.m; sourceTree = "<group>"; };
+		C012A84C1A3B011200123B54 /* TermsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TermsVC.xib; sourceTree = "<group>"; };
 		C012F5A81A1F39B300893ED3 /* ControlGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControlGroup.h; sourceTree = "<group>"; };
 		C012F5A91A1F39C000893ED3 /* ControlGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlGroup.m; sourceTree = "<group>"; };
 		C013CB311A19C8710073DA65 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -217,6 +250,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C012A83C1A3AED8500123B54 /* QuartzCore.framework in Frameworks */,
 				C013CB341A19C87E0073DA65 /* CoreLocation.framework in Frameworks */,
 				C013CB321A19C8710073DA65 /* MapKit.framework in Frameworks */,
 				C002F5791A15D6E600FBA197 /* CoreGraphics.framework in Frameworks */,
@@ -260,6 +294,7 @@
 		C002F5751A15D6E600FBA197 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C012A83B1A3AED8500123B54 /* QuartzCore.framework */,
 				C013CB331A19C87E0073DA65 /* CoreLocation.framework */,
 				C013CB311A19C8710073DA65 /* MapKit.framework */,
 				C002F5761A15D6E600FBA197 /* Foundation.framework */,
@@ -273,12 +308,15 @@
 		C002F57C1A15D6E600FBA197 /* KCBS */ = {
 			isa = PBXGroup;
 			children = (
+				C01C64C11A3968B40023F9A7 /* AgentClasses */,
+				C012A8491A3B00F400123B54 /* TermsClasses */,
+				C012A8431A3B00B500123B54 /* ShareFriendclasses */,
+				C012A83D1A3B007400123B54 /* ProductinfoClasses */,
 				C01C64C61A396A9C0023F9A7 /* MainMenuClasses */,
 				C01C64C51A396A6A0023F9A7 /* FeedbackClasses */,
 				C01C64C41A396A480023F9A7 /* ContactUsClasses */,
 				C01C64C31A3969AE0023F9A7 /* BranchLocatorClasses */,
 				C01C64C21A3969690023F9A7 /* CustomerClasses */,
-				C01C64C11A3968B40023F9A7 /* AgentClasses */,
 				C01C64C01A3968620023F9A7 /* Libraries */,
 				C01C64BF1A3967DC0023F9A7 /* images */,
 				C002F5881A15D6E600FBA197 /* Images.xcassets */,
@@ -315,6 +353,36 @@
 				C002F5981A15D6E600FBA197 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C012A83D1A3B007400123B54 /* ProductinfoClasses */ = {
+			isa = PBXGroup;
+			children = (
+				C012A83E1A3B009700123B54 /* ProductInfoVC.h */,
+				C012A83F1A3B009700123B54 /* ProductInfoVC.m */,
+				C012A8401A3B009700123B54 /* ProductInfoVC.xib */,
+			);
+			name = ProductinfoClasses;
+			sourceTree = "<group>";
+		};
+		C012A8431A3B00B500123B54 /* ShareFriendclasses */ = {
+			isa = PBXGroup;
+			children = (
+				C012A8441A3B00E300123B54 /* SharefriendsVC.h */,
+				C012A8451A3B00E300123B54 /* SharefriendsVC.m */,
+				C012A8461A3B00E300123B54 /* SharefriendsVC.xib */,
+			);
+			name = ShareFriendclasses;
+			sourceTree = "<group>";
+		};
+		C012A8491A3B00F400123B54 /* TermsClasses */ = {
+			isa = PBXGroup;
+			children = (
+				C012A84A1A3B011200123B54 /* TermsVC.h */,
+				C012A84B1A3B011200123B54 /* TermsVC.m */,
+				C012A84C1A3B011200123B54 /* TermsVC.xib */,
+			);
+			name = TermsClasses;
 			sourceTree = "<group>";
 		};
 		C01C64BF1A3967DC0023F9A7 /* images */ = {
@@ -367,6 +435,16 @@
 		C01C64C01A3968620023F9A7 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				C012A82B1A3ACD2600123B54 /* MVYSideMenuController.h */,
+				C012A82C1A3ACD2600123B54 /* MVYSideMenuController.m */,
+				C012A82D1A3ACD2600123B54 /* MVYSideMenuOptions.h */,
+				C012A82E1A3ACD2600123B54 /* MVYSideMenuOptions.m */,
+				C012A82F1A3ACD2600123B54 /* MVYMenuViewController.h */,
+				C012A8301A3ACD2600123B54 /* MVYMenuViewController.m */,
+				C012A8311A3ACD2600123B54 /* MVYMenuViewController.xib */,
+				C012A8321A3ACD2600123B54 /* MVYContentViewController.h */,
+				C012A8331A3ACD2600123B54 /* MVYContentViewController.m */,
+				C012A8341A3ACD2600123B54 /* MVYContentViewController.xib */,
 				C00FE0E81A247F030031D3A1 /* CollapseClick.h */,
 				C00FE0E91A247F030031D3A1 /* CollapseClick.m */,
 				C00FE0EA1A247F030031D3A1 /* CollapseClickCell.h */,
@@ -539,6 +617,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C012A8421A3B009700123B54 /* ProductInfoVC.xib in Resources */,
 				C0FEB7F81A3859D600FA7C38 /* agentLoginBIcon.png in Resources */,
 				C009AE881A39A01700A2F255 /* biglogo.png in Resources */,
 				C00E353F1A383125000C1DE5 /* sharesIcon.png in Resources */,
@@ -566,7 +645,9 @@
 				C00FD6651A31BB8E006594C1 /* CustomerAccountSumVC.xib in Resources */,
 				C01170621A20AD3B000A88CC /* man271.png in Resources */,
 				C00FD65D1A31828A006594C1 /* RecoveryVisitVC.xib in Resources */,
+				C012A8381A3ACD2600123B54 /* MVYMenuViewController.xib in Resources */,
 				C00E35431A383126000C1DE5 /* contactsIcon.png in Resources */,
+				C012A83A1A3ACD2600123B54 /* MVYContentViewController.xib in Resources */,
 				C0FEB8081A386B1200FA7C38 /* defaulterLoanSIcon.png in Resources */,
 				C01C64D61A39823E0023F9A7 /* accSummaryIcon_Small.png in Resources */,
 				C00E35421A383126000C1DE5 /* custLoginsIcon.png in Resources */,
@@ -582,8 +663,10 @@
 				C0FEB7FA1A3859F100FA7C38 /* contactBIcon.png in Resources */,
 				C002F5891A15D6E600FBA197 /* Images.xcassets in Resources */,
 				C0FEB7FE1A385A0600FA7C38 /* feedbackBIcon.png in Resources */,
+				C012A8481A3B00E300123B54 /* SharefriendsVC.xib in Resources */,
 				C01170641A20AD3B000A88CC /* magnifying4.png in Resources */,
 				C00FE0F61A247F6C0031D3A1 /* icon114.png in Resources */,
+				C012A84E1A3B011200123B54 /* TermsVC.xib in Resources */,
 				C00E35351A382CA3000C1DE5 /* bg.png in Resources */,
 				C0FEB7FC1A3859F900FA7C38 /* custLoginBIcon.png in Resources */,
 				C00FE0FE1A2484340031D3A1 /* password-01.png in Resources */,
@@ -609,22 +692,29 @@
 				C002F5B31A15E0FC00FBA197 /* ContactUsViewController.m in Sources */,
 				C002F5AA1A15D94900FBA197 /* AgentLogInViewController.m in Sources */,
 				C0640FD11A232E270035CEDA /* RemindersVC.m in Sources */,
+				C012A8471A3B00E300123B54 /* SharefriendsVC.m in Sources */,
 				C013CB371A19C8EF0073DA65 /* MapAnnotation.m in Sources */,
 				C002F5B01A15DFC500FBA197 /* BranchLocatorViewController.m in Sources */,
 				C002F5871A15D6E600FBA197 /* AppDelegate.m in Sources */,
 				C00FE0F21A247F030031D3A1 /* CollapseClickArrow.m in Sources */,
 				C00FD65C1A31828A006594C1 /* RecoveryVisitVC.m in Sources */,
+				C012A8351A3ACD2600123B54 /* MVYSideMenuController.m in Sources */,
 				C00FE0E71A247DF20031D3A1 /* DynamicLoansVC.m in Sources */,
+				C012A84D1A3B011200123B54 /* TermsVC.m in Sources */,
+				C012A8361A3ACD2600123B54 /* MVYSideMenuOptions.m in Sources */,
 				C0640FCE1A232E070035CEDA /* LoanViewVC.m in Sources */,
 				C002F5A71A15D76800FBA197 /* MenuViewController.m in Sources */,
+				C012A8371A3ACD2600123B54 /* MVYMenuViewController.m in Sources */,
 				C002F5AD1A15DCBC00FBA197 /* CustomerLogInViewController.m in Sources */,
 				C012F5AA1A1F39C000893ED3 /* ControlGroup.m in Sources */,
 				C00FD6691A31BC23006594C1 /* CustomerReminderVC.m in Sources */,
 				C00FD6601A31B42B006594C1 /* CustomerProfileVC.m in Sources */,
 				C002F5831A15D6E600FBA197 /* main.m in Sources */,
+				C012A8411A3B009700123B54 /* ProductInfoVC.m in Sources */,
 				C00FE0FA1A24837C0031D3A1 /* ViewController.m in Sources */,
 				C002F5B61A15E20A00FBA197 /* FeedbackViewController.m in Sources */,
 				C00FE0EF1A247F030031D3A1 /* CollapseClick.m in Sources */,
+				C012A8391A3ACD2600123B54 /* MVYContentViewController.m in Sources */,
 				C01170001A2057BB000A88CC /* AgentProfileVC.m in Sources */,
 				C0100CEF1A230B2400A1A111 /* DefaulterLoansVC.m in Sources */,
 				C00FD6641A31BB8E006594C1 /* CustomerAccountSumVC.m in Sources */,

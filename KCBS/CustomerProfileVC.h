@@ -14,7 +14,7 @@
 @property (nonatomic,strong)UIView *customer_view;
 @property (nonatomic,strong)UILabel *name_lbl;
 @property (nonatomic,strong)UIImageView  *imgview_custompro;
-@property (nonatomic,strong)UIImageView *img_drawer;
+//@property (nonatomic,strong)UIImageView *img_drawer;
 
 
 

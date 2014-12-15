@@ -13,7 +13,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UINavigationController *navigationController;
-@property (strong, nonatomic) MenuViewController *menuViewController;
+@property (nonatomic,strong)MenuViewController *mvc;
+//@property (strong, nonatomic) MenuViewController * menuViewController;
 @property(nonatomic,strong) NSString *agent_usrname;
 @property(nonatomic,strong) NSString *agent_pass;
 

@@ -23,7 +23,7 @@
 @synthesize customer_view;
 @synthesize name_lbl;
 @synthesize imgview_custompro;
-@synthesize img_drawer;
+//@synthesize img_drawer;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -38,14 +38,14 @@
     [super viewDidLoad];
     ///self.view.backgroundColor=[UIColor colorWithRed:0.325 green:0.816 blue:1 alpha:1];
      self.parentViewController.navigationItem.titleView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"small.png"]];
-    UIBarButtonItem *right=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"logoutIcon.png"]style:UIBarButtonItemStylePlain
-                                                          target:self
-                                                          action:@selector(clicked)];
-    img_drawer= [[UIImageView alloc]
-                initWithFrame:CGRectMake(12,8,20,20)];
-    [img_drawer setImage:[UIImage imageNamed:@"logoutIcon.png"]];
+//    UIBarButtonItem *right=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"logoutIcon.png"]style:UIBarButtonItemStylePlain
+//                                                          target:self
+//                                                          action:@selector(clicked)];
+//    img_drawer= [[UIImageView alloc]
+//                initWithFrame:CGRectMake(12,8,20,20)];
+//    [img_drawer setImage:[UIImage imageNamed:@"logoutIcon.png"]];
    // right.customView=img_drawer;
-    self.parentViewController.navigationItem.rightBarButtonItem = right;
+    //self.parentViewController.navigationItem.rightBarButtonItem = right;
     
 
     

@@ -11,7 +11,7 @@
 @implementation AppDelegate
 
 @synthesize navigationController;
-@synthesize menuViewController;
+@synthesize mvc;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -22,31 +22,31 @@
     [self.window addSubview:[self.navigationController view]];
     
     //check if the first viewcontroller eixsts, otherwise create it
-    if(self.menuViewController == nil)
+if(self.mvc == nil)
     {
         MenuViewController *menuView = [[MenuViewController alloc] init];
-        self.menuViewController = menuView;
+        self.mvc = menuView;
     }
-    
+//
     //push the first viewcontroller into the navigation view controller stack
     self.navigationController.navigationBarHidden=TRUE;
-    [self.navigationController pushViewController:self.menuViewController animated:YES];
+   [self.navigationController pushViewController:self.mvc animated:YES];
     //UIImage *image = [UIImage im];
     
-//    UIButton *logoView = [[UIButton alloc] initWithFrame:CGRectMake(0,0,85,40)];
-//    [logoView setBackgroundImage:[UIImage imageNamed:@"kcbsLogo.png"] forState:UIControlStateNormal];
-//    [logoView setUserInteractionEnabled:NO];
-//    
-//    self.navigationController.navigationItem.titleView = logoView;
-//    
+    //    UIButton *logoView = [[UIButton alloc] initWithFrame:CGRectMake(0,0,85,40)];
+    //    [logoView setBackgroundImage:[UIImage imageNamed:@"kcbsLogo.png"] forState:UIControlStateNormal];
+    //    [logoView setUserInteractionEnabled:NO];
+    //
+    //    self.navigationController.navigationItem.titleView = logoView;
+    //
     //self.navigationItem.titleView = iv;
-//    UIImageView* imageView = [[UIImageView alloc] initWithFrame:CGRectMake(130, 20, 50,  54)];
-//    imageView.image = [UIImage imageNamed:@"kcbsLogo.png"];
-//    [self.navigationController.view addSubview:imageView];
-   //[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"kcbsLogo.png"] forBarMetrics:UIBarMetricsDefault];
-//    UIImage *image = [UIImage imageNamed:@"kcbsLogo.png"];
-   
-
+    //    UIImageView* imageView = [[UIImageView alloc] initWithFrame:CGRectMake(130, 20, 50,  54)];
+    //    imageView.image = [UIImage imageNamed:@"kcbsLogo.png"];
+    //    [self.navigationController.view addSubview:imageView];
+    //[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"kcbsLogo.png"] forBarMetrics:UIBarMetricsDefault];
+    //    UIImage *image = [UIImage imageNamed:@"kcbsLogo.png"];
+    
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

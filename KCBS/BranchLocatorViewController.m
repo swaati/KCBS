@@ -40,13 +40,13 @@
     location1.longitude = (double) 82.2250;
 //    // Add the annotation to our map view
    MapAnnotation *newAnnotation = [[MapAnnotation alloc]
-                                   initWithTitle:@"Sarpavaram" andCoordinate:location1];
+                                   initWithTitle:@"BendaComplex,1st Floor,Sarpavaram,Junction,kakinada-533005" andCoordinate:location1];
 [mapView addAnnotation:newAnnotation];
     CLLocationCoordinate2D location;
     location.latitude = (double) 16.945418;
     location.longitude = (double) 82.234949;
     MapAnnotation *newAnnotation2 = [[MapAnnotation alloc]
-                                     initWithTitle:@"Kakinada" andCoordinate:location];
+                                     initWithTitle:@"Sahakarasadan,13-4-13,ramayyastreet,Suryaraopet,Kakinada" andCoordinate:location];
     [mapView addAnnotation:newAnnotation2];
     [self.view addSubview:mapView];
 

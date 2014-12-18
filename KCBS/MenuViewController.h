@@ -12,6 +12,9 @@
 #import "BranchLocatorViewController.h"
 #import "ContactUsViewController.h"
 #import "FeedbackViewController.h"
+#import "SharefriendsVC.h"
+#import "TermsVC.h"
+#import "ProductInfoVC.h"
 
 @interface MenuViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 {

@@ -17,6 +17,7 @@
 @property(nonatomic,strong) UIButton *addreminder_btn;
 @property(nonatomic,strong)NSMutableArray *dataArray;
 @property(nonatomic,strong)UIImageView *imgview_customreminders;
+@property(nonatomic,strong)NSString *sweet;
 
 
 

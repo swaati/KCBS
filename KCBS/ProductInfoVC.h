@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ProductInfoVC.h"
 
 @interface ProductInfoVC : UIViewController
 

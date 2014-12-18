@@ -7,10 +7,10 @@
 //
 
 #import "CustomerProfileVC.h"
-#import "MVYMenuViewController.h"
-#import "MVYContentViewController.h"
-#import "MVYSideMenuOptions.h"
-#import "MVYSideMenuController.h"
+//#import "MVYMenuViewController.h"
+//#import "MVYContentViewController.h"
+//#import "MVYSideMenuOptions.h"
+//#import "MVYSideMenuController.h"
 
 
 @interface CustomerProfileVC ()
@@ -38,6 +38,17 @@
     [super viewDidLoad];
     ///self.view.backgroundColor=[UIColor colorWithRed:0.325 green:0.816 blue:1 alpha:1];
      self.parentViewController.navigationItem.titleView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"small.png"]];
+    self.parentViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel_Clicked)];
+    
+    //    self.parentViewController.navigationItem.leftBarButtonItem = addButton;
+    self.parentViewController.navigationItem.leftBarButtonItem.enabled = YES;
+    
+    self.parentViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel_Clicked)];
+    
+    //    self.parentViewController.navigationItem.leftBarButtonItem = addButton;
+    self.parentViewController.navigationItem.leftBarButtonItem.enabled = YES;
+    
+
 //    UIBarButtonItem *right=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"logoutIcon.png"]style:UIBarButtonItemStylePlain
 //                                                          target:self
 //                                                          action:@selector(clicked)];
@@ -95,26 +106,30 @@
 
     // Do any additional setup after loading the view.
 }
--(void)clicked{
-    MVYMenuViewController *menuVC = [[MVYMenuViewController alloc] initWithNibName:@"MVYMenuViewController" bundle:nil];
-    MVYContentViewController *contentVC = [[MVYContentViewController alloc] initWithNibName:@"MVYContentViewController" bundle:nil];
-    UINavigationController *contentNavigationController = [[UINavigationController alloc] initWithRootViewController:contentVC];
-    MVYSideMenuOptions *options = [[MVYSideMenuOptions alloc] init];
-    options.contentViewScale = 1.0;
-    options.contentViewOpacity = 0.05;
-    options.shadowOpacity = 0.0;
-    options.panFromBezel = NO;
-    options.panFromNavBar = YES;
-    options.animationDuration = 0.3f;
-    MVYSideMenuController *sideMenuController = [[MVYSideMenuController alloc] initWithMenuViewController:menuVC
-                                                                                    contentViewController:contentNavigationController
-                                                                                                  options:options];
-    sideMenuController.menuFrame = CGRectMake(0, 64.0, 220.0, 400);
+-(void)cancel_Clicked
+{
     
-    [self.navigationController pushViewController:sideMenuController animated:YES];
-    sideMenuController = nil;
-    NSLog(@"slider is clicked");
 }
+//-(void)clicked{
+//    MVYMenuViewController *menuVC = [[MVYMenuViewController alloc] initWithNibName:@"MVYMenuViewController" bundle:nil];
+//    MVYContentViewController *contentVC = [[MVYContentViewController alloc] initWithNibName:@"MVYContentViewController" bundle:nil];
+//    UINavigationController *contentNavigationController = [[UINavigationController alloc] initWithRootViewController:contentVC];
+//    MVYSideMenuOptions *options = [[MVYSideMenuOptions alloc] init];
+//    options.contentViewScale = 1.0;
+//    options.contentViewOpacity = 0.05;
+//    options.shadowOpacity = 0.0;
+//    options.panFromBezel = NO;
+//    options.panFromNavBar = YES;
+//    options.animationDuration = 0.3f;
+//    MVYSideMenuController *sideMenuController = [[MVYSideMenuController alloc] initWithMenuViewController:menuVC
+//                                                                                    contentViewController:contentNavigationController
+//                                                                                                  options:options];
+//    sideMenuController.menuFrame = CGRectMake(0, 64.0, 220.0, 400);
+//    
+//    [self.navigationController pushViewController:sideMenuController animated:YES];
+//    sideMenuController = nil;
+//    NSLog(@"slider is clicked");
+//}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
     return 1;

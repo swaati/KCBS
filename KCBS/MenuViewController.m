@@ -61,6 +61,7 @@
                                     second,first,third,nil];
     NSString * result = [tableContent  componentsJoinedByString:@""];
     NSLog(@"swati= %@", result);
+    
     date_lbl=[[UILabel alloc]initWithFrame:CGRectMake(22,30,100,10)];
     date_lbl.font=[UIFont fontWithName:@"Helvetica" size:10];
     date_lbl.textColor = [UIColor blackColor];
@@ -349,6 +350,28 @@ AgentLogInViewController *agentloginViewController = [[ AgentLogInViewController
         [self.navigationController pushViewController:feedbackViewController animated:YES];
         feedbackViewController = nil;
     }
+    if (indexPath.row==5){
+        //NSLog(@"fifth row");
+        
+          ProductInfoVC *productViewController = [[ ProductInfoVC alloc]init];
+        [self.navigationController pushViewController:productViewController animated:YES];
+        productViewController = nil;
+    }
+    if (indexPath.row==6){
+        //NSLog(@"fifth row");
+        
+        SharefriendsVC *shareViewController = [[ SharefriendsVC alloc]init];
+        [self.navigationController pushViewController:shareViewController animated:YES];
+        shareViewController = nil;
+    }
+    if (indexPath.row==7){
+        //NSLog(@"fifth row");
+        
+        TermsVC *termsViewController = [[ TermsVC alloc]init];
+        [self.navigationController pushViewController:termsViewController animated:YES];
+        termsViewController = nil;
+    }
+
 
 }
 - (void)viewWillAppear:(BOOL)animated

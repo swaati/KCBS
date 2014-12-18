@@ -229,7 +229,9 @@ CGRectMake(58, 160, 280, 80)];
            recoveryvisit_vc.tabBarItem= [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"RecoveryVisit", nil)
                 image:[UIImage imageNamed:@"recoveryVisitIcon_Small.png"]
                                                                         tag:3];
-           LoanViewVC *loanview_vc=[[LoanViewVC alloc]init];
+          
+
+           AgentLoanViewVC *loanview_vc=[[AgentLoanViewVC alloc]init];
            [tabViewControllers addObject:loanview_vc];
            loanview_vc.tabBarItem=[[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"LoanView", nil)
             image:[UIImage imageNamed:@"loanViewIcon_Small.png"]

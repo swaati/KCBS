@@ -10,12 +10,14 @@
 #import "AgentProfileVC.h"
 #import "DefaulterLoansVC.h"
 #import "RecoveryVisitVC.h"
-#import "LoanViewVC.h"
+
+#import "AgentLoanViewVC.h"
+
 #import "RemindersVC.h"
 #import "DynamicLoansVC.h"
 #import "ViewController.h"
 
-@interface AgentLogInViewController : UIViewController<UITextFieldDelegate,UIScrollViewDelegate,UITabBarControllerDelegate>
+@interface AgentLogInViewController : UIViewController<UITextFieldDelegate,UIScrollViewDelegate,UITabBarControllerDelegate,CollapseClickDelegate>
 @property (strong, nonatomic) UITabBarController *tabBarcontroller;
 @property(nonatomic,strong)UIScrollView *scrollView_agent;
 @property(nonatomic,strong) UIImageView *imgview_agent;

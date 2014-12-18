@@ -9,6 +9,7 @@
 #import "CustomerReminderVC.h"
 
 @interface CustomerReminderVC ()
+- (void)reloadTable;
 
 @end
 
@@ -21,6 +22,7 @@
 @synthesize addreminder_btn;
 @synthesize dataArray;
 @synthesize imgview_customreminders;
+@synthesize sweet;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -67,11 +69,15 @@
        [addreminder_btn addTarget:self
                     action:@selector(addreminderbtn_Clicked)
             forControlEvents:UIControlEventTouchUpInside];
-    [addreminder_btn setFrame:CGRectMake(200,10, 50, 30)];
-    [addreminder_btn setTitle:@"+" forState:UIControlStateNormal];
+    [addreminder_btn setFrame:CGRectMake(210,15, 50, 30)];
+    [addreminder_btn setTitle:@"Add" forState:UIControlStateNormal];
     [reminder_view addSubview:addreminder_btn];
 
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reloadTable)
+                                                 name:@"reloadData"
+                                               object:nil];
+
     // Do any additional setup after loading the view.
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -83,9 +89,15 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return [dataArray count];
+    //return [dataArray count];
+    return [[[UIApplication sharedApplication] scheduledLocalNotifications] count];
+
+    
 }
-//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 100.0;
+
+}
 //    CGFloat height = 0.0;
 //
 //    if (indexPath.row == 4)
@@ -97,27 +109,58 @@
 //    return height + 44;
 //}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    static NSString *CellIdentifier = @"Cell";
+//    
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//    
+//    if (cell == nil) {
+//        
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+//        
+//        
+//            UILabel *father_namelbl=[[UILabel alloc]initWithFrame:CGRectMake(10,10,200,20)];
+//            father_namelbl.numberOfLines = 0;
+//            father_namelbl.font = [UIFont fontWithName:@"Helvetica-Bold" size:15];
+//            father_namelbl.textColor = [UIColor blackColor];
+//            father_namelbl.text=@"Recovery Visits";
+//            [cell.contentView addSubview:father_namelbl];
+//       
+//        
+//        
+//    }
+//    
+//    return cell;
     static NSString *CellIdentifier = @"Cell";
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    if (cell == nil) {
-        
+    // Get list of local notifications
+    NSArray *localNotifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
+    UILocalNotification *localNotification = [localNotifications objectAtIndex:indexPath.row];
+    if(cell==nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        UILabel *msg_namelbl=[[UILabel alloc]initWithFrame:CGRectMake(10,10,200,20)];
+                msg_namelbl.numberOfLines = 0;
+                    msg_namelbl.font = [UIFont fontWithName:@"Helvetica" size:16];
+                  msg_namelbl.textColor = [UIColor blackColor];
+                   msg_namelbl.text=localNotification.alertBody;
         
-        
-            UILabel *father_namelbl=[[UILabel alloc]initWithFrame:CGRectMake(10,10,200,20)];
-            father_namelbl.numberOfLines = 0;
-            father_namelbl.font = [UIFont fontWithName:@"Helvetica-Bold" size:15];
-            father_namelbl.textColor = [UIColor blackColor];
-            father_namelbl.text=@"Recovery Visits";
-            [cell.contentView addSubview:father_namelbl];
+        UILabel *date_namelbl=[[UILabel alloc]initWithFrame:CGRectMake(10,40,200,20)];
+        date_namelbl.numberOfLines = 0;
+        date_namelbl.font = [UIFont fontWithName:@"Helvetica" size:14];
+        date_namelbl.textColor = [UIColor blackColor];
+        date_namelbl.text=[localNotification.fireDate description];
+        sweet=[localNotification.fireDate description];
+         NSLog(@"date= %@",sweet);
        
-        
-        
+        [cell.contentView addSubview:msg_namelbl];
+         [cell.contentView addSubview:date_namelbl];
     }
+    // Display notification info
+    //[cell.textLabel setText:localNotification.alertBody];
+    //[cell.detailTextLabel setText:[localNotification.fireDate description]];
     
     return cell;
+
 }
 
 #pragma mark - UITableViewDelegate Methods
@@ -171,6 +214,74 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)reloadTable
+{
+    [self.customerdreminders_tv reloadData];
+}
+
+
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+
+
+
+ // Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//    if (editingStyle == UITableViewCellEditingStyleDelete) {
+//        // Delete the row from the data source
+//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//        
+        if (editingStyle == UITableViewCellEditingStyleDelete) {
+            
+//            [controller removeObjectFromListAtIndex:indexPath.row];
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }
+   
+        
+        
+        
+        
+   
+    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }
+}
+
+
+
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+
+
+
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+
+
+#pragma mark - Table view delegate
+
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    // Navigation logic may go here. Create and push another view controller.
+//    /*
+//     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+//     // ...
+//     // Pass the selected object to the new view controller.
+//     [self.navigationController pushViewController:detailViewController animated:YES];
+//     */
+//}
+//
 
 /*
  #pragma mark - Navigation

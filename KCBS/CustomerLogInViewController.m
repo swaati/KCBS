@@ -164,6 +164,9 @@
     else {
         
         NSMutableArray *customer_tabViewControllers = [[NSMutableArray alloc] init];
+        //MVYContentViewController *menuvc=[[MVYContentViewController alloc]init];
+        //[customer_tabViewControllers addObject:menuvc];
+
         CustomerProfileVC *customer_vc=[[CustomerProfileVC alloc]init];
         [customer_tabViewControllers addObject:customer_vc];
         customer_vc.tabBarItem =

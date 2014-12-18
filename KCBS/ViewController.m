@@ -74,7 +74,7 @@
 
 -(NSString *)titleForCollapseClickAtIndex:(int)index {
     
-    agent_view=[[UIView alloc]initWithFrame:CGRectMake(0,0, 320,180)];
+    agent_view=[[UIView alloc]initWithFrame:CGRectMake(0,0, 320,100)];
     agent_view.backgroundColor=[UIColor whiteColor];
     //agent_view.backgroundColor=[UIColor colorWithRed:0.965 green:0.506 blue:0.129 alpha:1];;
     [self.view addSubview:agent_view];

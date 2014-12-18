@@ -90,7 +90,7 @@
     add_label.text = @"Address           :";
     [self.view addSubview:add_label];
     
-    add_label2=[[UILabel alloc]initWithFrame:CGRectMake(110, 275, 190, 50)];
+    add_label2=[[UILabel alloc]initWithFrame:CGRectMake(110, 272, 190, 50)];
     add_label2.font=[UIFont fontWithName:@"Helvetica" size:12];
     add_label2.textColor = [UIColor blackColor];
     add_label2.textAlignment = NSTextAlignmentLeft;
@@ -115,7 +115,7 @@
     door_label.backgroundColor = [UIColor clearColor];
     door_label.text = @"Door no           :";
     [self.view addSubview:door_label];
-    door_label2=[[UILabel alloc]initWithFrame:CGRectMake(110, 317, 190, 50)];
+    door_label2=[[UILabel alloc]initWithFrame:CGRectMake(110, 310, 190, 50)];
     door_label2.font=[UIFont fontWithName:@"Helvetica" size:12];
     door_label2.textColor = [UIColor blackColor];
     door_label2.backgroundColor = [UIColor clearColor];

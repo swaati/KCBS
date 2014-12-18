@@ -20,7 +20,10 @@
 @synthesize reminder_hr_txt;
 @synthesize reminder_days_txt;
 @synthesize reminder_months_txt;
-@synthesize msgtxt_view;
+@synthesize datePicker;
+@synthesize cancel_btn;
+@synthesize save_btn;
+//@synthesize msgtxt_view;
 @synthesize set_reminderbtn;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,6 +37,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.reminder_sbj_txt.delegate = self;
+
     self.parentViewController.navigationItem.titleView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"small.png"]];
     addreminder_view=[[UIView alloc]initWithFrame:CGRectMake(0,65, 320,65)];
     addreminder_view.backgroundColor=[UIColor colorWithRed:0.965 green:0.506 blue:0.129 alpha:1];;
@@ -98,20 +103,55 @@
     reminder_months_txt.autocorrectionType = UITextAutocorrectionTypeNo;
     reminder_months_txt.returnKeyType = UIReturnKeyNext;
     reminder_months_txt.clearButtonMode = UITextFieldViewModeWhileEditing;
-    msgtxt_view=[[UITextView  alloc] initWithFrame:
-                  CGRectMake(20,100, 280, 200)];
-    // txt_comments.borderStyle = UITextBorderStyleRoundedRect;
-    // txt_comments.contentVerticalAlignment =UIControlContentVerticalAlignmentCenter;
-    [msgtxt_view setFont:[UIFont boldSystemFontOfSize:12]];
-    //txt_comments.placeholder = @"User Name";
+    CGRect pickerFrame = CGRectMake(0,100,0,0);
     
-    msgtxt_view.delegate = self;
-    msgtxt_view.autocorrectionType = UITextAutocorrectionTypeNo;
-    msgtxt_view.returnKeyType = UIReturnKeyNext;
-    msgtxt_view.layer.borderWidth = 0.5f;
-    msgtxt_view.layer.borderColor = [[UIColor grayColor] CGColor];
-    //txt_comments.clearButtonMode = UITextFieldViewModeWhileEditing;
-    [scrollView_addreminder addSubview:msgtxt_view];
+   datePicker = [[UIDatePicker alloc] initWithFrame:pickerFrame];
+//    [datePicker addTarget:self action:@selector(pickerChanged:)               forControlEvents:UIControlEventValueChanged];
+    [scrollView_addreminder addSubview:datePicker];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDate *currentDate = [NSDate date];
+    NSDateComponents *comps = [[NSDateComponents alloc] init];
+    [comps setYear:30];
+    NSDate *maxDate = [calendar dateByAddingComponents:comps toDate:currentDate options:0];
+    [comps setYear:-30];
+    NSDate *minDate = [calendar dateByAddingComponents:comps toDate:currentDate options:0];
+    
+    [datePicker setMaximumDate:maxDate];
+    [datePicker setMinimumDate:minDate];
+    UIBarButtonItem *cancel_btn=[[UIBarButtonItem alloc]
+                                   initWithTitle:@"Cancel"
+                                   style:UIBarButtonItemStyleBordered
+                                   target:self
+                                   action:@selector(cancel_clicked)];
+    self.navigationItem.leftBarButtonItem = cancel_btn;
+    
+    UIBarButtonItem *save_btn=[[UIBarButtonItem alloc]
+                                 initWithTitle:@"Save"
+                                 style:UIBarButtonItemStyleBordered
+                                 target:self
+                                 action:@selector(save_clicked)];
+    self.navigationItem.rightBarButtonItem = save_btn;
+//    datePicker.frame = CGRectMake(0,600,320,200);
+//        datePicker = [[UIDatePicker alloc]init];
+//    
+//    [datePicker setBackgroundColor:[UIColor clearColor]];
+//    //datePicker.showsSelectionIndicator = YES;
+//    datePicker.tintColor=[UIColor orangeColor];
+//[scrollView_addreminder addSubview:datePicker];
+//    msgtxt_view=[[UITextView  alloc] initWithFrame:
+//                  CGRectMake(20,100, 280, 200)];
+//    // txt_comments.borderStyle = UITextBorderStyleRoundedRect;
+//    // txt_comments.contentVerticalAlignment =UIControlContentVerticalAlignmentCenter;
+//    [msgtxt_view setFont:[UIFont boldSystemFontOfSize:12]];
+//    //txt_comments.placeholder = @"User Name";
+//    
+//    msgtxt_view.delegate = self;
+//    msgtxt_view.autocorrectionType = UITextAutocorrectionTypeNo;
+//    msgtxt_view.returnKeyType = UIReturnKeyNext;
+//    msgtxt_view.layer.borderWidth = 0.5f;
+//    msgtxt_view.layer.borderColor = [[UIColor grayColor] CGColor];
+//    //txt_comments.clearButtonMode = UITextFieldViewModeWhileEditing;
+//    [scrollView_addreminder addSubview:msgtxt_view];
     set_reminderbtn = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     //agentloginbtn.layer.cornerRadius = 5;
     //agentloginbtn.layer.borderWidth = 1;
@@ -138,11 +178,46 @@
 
     // Do any additional setup after loading the view from its nib.
 }
+-(void)cancel_clicked{
+    [self.navigationController popViewControllerAnimated:YES];
+    //[self.navigationController removeFromParentViewController:addremind_vc animated:YES];
+    //[self.parentViewController dismissViewControllerAnimated:YES completion:nil];
+}
+-(void)save_clicked{
+    [self.reminder_sbj_txt resignFirstResponder];
+    NSDate *pickerDate = [self.datePicker date];
+    
+    // Schedule the notification
+    UILocalNotification* localNotification = [[UILocalNotification alloc] init];
+    localNotification.fireDate = pickerDate;
+    //localNotification.soundName=@"John_Wesley_Coleman_-_07_-_Tequila_10_Seconds.mp3";
+    localNotification.alertBody = self.reminder_sbj_txt.text;
+    localNotification.alertAction = @"Show me the item";
+    [localNotification setTimeZone:[NSTimeZone localTimeZone]];
+   
+    localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    
+    // Request to reload table view data
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadData" object:self];
+    
+    // Dismiss the view controller
+    [self.navigationController popViewControllerAnimated:YES];
+    //[self dismissViewControllerAnimated:YES completion:nil];
+
+}
 -(void)setreminderbtn_Clicked{
     
     
     
 }
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self.reminder_sbj_txt resignFirstResponder];
+    return NO;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

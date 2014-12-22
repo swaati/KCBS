@@ -169,6 +169,7 @@
 
         CustomerProfileVC *customer_vc=[[CustomerProfileVC alloc]init];
         [customer_tabViewControllers addObject:customer_vc];
+        
         customer_vc.tabBarItem =
         [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"View Profile", nil)
                                       image:[UIImage imageNamed:@"profileIcon_Small.png"]

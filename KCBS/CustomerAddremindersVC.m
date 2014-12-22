@@ -37,6 +37,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //[[self tabBarItem] setBadgeValue:@"42"];
+
+    //self.tabBarController.tabBarItem.badgeValue=0;
     self.reminder_sbj_txt.delegate = self;
 
     self.parentViewController.navigationItem.titleView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"small.png"]];
@@ -190,14 +193,16 @@
     // Schedule the notification
     UILocalNotification* localNotification = [[UILocalNotification alloc] init];
     localNotification.fireDate = pickerDate;
+    
     //localNotification.soundName=@"John_Wesley_Coleman_-_07_-_Tequila_10_Seconds.mp3";
     localNotification.alertBody = self.reminder_sbj_txt.text;
     localNotification.alertAction = @"Show me the item";
     [localNotification setTimeZone:[NSTimeZone localTimeZone]];
-   
-    localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
     
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
+//   [[self tabBarItem] setBadgeValue:[NSString stringWithFormat:@"%d",[[UIApplication sharedApplication] applicationIconBadgeNumber] + 1]];
+   // [[self tabBarItem] setBadgeValue:1];
+            [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     
     // Request to reload table view data
     [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadData" object:self];

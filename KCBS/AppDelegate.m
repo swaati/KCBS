@@ -87,10 +87,15 @@ if(self.mvc == nil)
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Customer Reminder"
                                                         message:notification.alertBody
                                                        delegate:self cancelButtonTitle:@"OK"
+                              
                                               otherButtonTitles:nil];
         [alert show];
     }
-    
+    //
+//    //  setting badge value of tab bar as shown below.
+//    application.applicationIconBadgeNumber = 0;
+//}
+
     // Request to reload table view data
     [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadData" object:self];
     

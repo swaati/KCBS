@@ -37,7 +37,41 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSDate *date = [NSDate date];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
+    
+    
+    [dateFormat setDateFormat:@"MMM dd, yyyy"];
+    NSString *dateString = [dateFormat stringFromDate:date];
+    NSArray *arr = [dateString componentsSeparatedByString:@" "];
+    NSLog(@"Todays date is = %@",dateString);
+    NSLog(@"Todays date is = %@",arr);
+    NSString *first = [arr objectAtIndex:0];
+    NSLog(@"String at index 0 = %@", first);
+    NSString *second = [arr objectAtIndex:1];
+    NSLog(@"String at index 0 = %@", second);
+    NSString *third = [arr objectAtIndex:2];
+    NSLog(@"String at index 0 = %@", third);
+    NSMutableArray *tableContent = [[NSMutableArray alloc] initWithObjects:
+                                    second,first,third,nil];
+    NSString * result = [tableContent  componentsJoinedByString:@""];
+    NSLog(@"swati= %@", result);
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"small.png"]];
+
+//    date_lbl=[[UILabel alloc]initWithFrame:CGRectMake(22,30,100,10)];
+//    date_lbl.font=[UIFont fontWithName:@"Helvetica" size:10];
+//    date_lbl.textColor = [UIColor blackColor];
+//    //date_lbl.backgroundColor = [UIColor redColor];
+//    date_lbl.text =result;
+//    paintView=[[UIView alloc]initWithFrame:CGRectMake(30,10,100,40)];
+//    //[paintView setBackgroundColor:[UIColor yellowColor]];
+//    self.parentViewController.navigationItem.titleView=paintView;
+//    logo=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"small.png"]];
+//    logo.frame=CGRectMake(29,0,44,29);
+//    [self.paintView addSubview:logo];
+//    [self.paintView addSubview:date_lbl];
+//    //self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"small.png"]];
+//    self.navigationItem.titleView =paintView;
 //    UIBarButtonItem *leftagent=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"backButton.png"]style:UIBarButtonItemStylePlain
 //                                                         target:self
 //                                                         action:nil];

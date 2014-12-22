@@ -35,22 +35,22 @@
     mapView.centerCoordinate = CLLocationCoordinate2DMake(37.32, -122.03);
     mapView.mapType = MKMapTypeStandard;
     
-   CLLocationCoordinate2D location1;
-   location1.latitude = (double) 17.0102;
+    CLLocationCoordinate2D location1;
+    location1.latitude = (double) 17.0102;
     location1.longitude = (double) 82.2250;
-//    // Add the annotation to our map view
-   MapAnnotation *newAnnotation = [[MapAnnotation alloc]
-                                   initWithTitle:@"BendaComplex,1st Floor,Sarpavaram,Junction,kakinada-533005" andCoordinate:location1];
-[mapView addAnnotation:newAnnotation];
+    //    // Add the annotation to our map view
+    MapAnnotation *newAnnotation = [[MapAnnotation alloc]
+                                    initWithTitle:@"Sarpavaram" andCoordinate:location1];
+    [mapView addAnnotation:newAnnotation];
     CLLocationCoordinate2D location;
     location.latitude = (double) 16.945418;
     location.longitude = (double) 82.234949;
     MapAnnotation *newAnnotation2 = [[MapAnnotation alloc]
-                                     initWithTitle:@"Sahakarasadan,13-4-13,ramayyastreet,Suryaraopet,Kakinada" andCoordinate:location];
+                                     initWithTitle:@"Kakinada" andCoordinate:location];
     [mapView addAnnotation:newAnnotation2];
     [self.view addSubview:mapView];
-
-
+    
+    
     // Do any additional setup after loading the view.
 }
 - (void)mapView:(MKMapView *)mv didAddAnnotationViews:(NSArray *)views
@@ -71,14 +71,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

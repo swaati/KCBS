@@ -693,7 +693,7 @@ NSLog(@"erhwejefjcehfchndsfdsf is %@",outstamount_lbl1.text);
 ////        
 ////        
 //    }
-
+////
 }
 
 @end

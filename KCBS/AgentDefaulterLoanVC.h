@@ -1,10 +1,12 @@
 //
-//  ViewController.h
-//  CollapseClick
+//  AgentDefaulterLoanVC.h
+//  KCBS
 //
-//  Created by Ben Gordon on 2/28/13.
-//  Copyright (c) 2013 Ben Gordon. All rights reserved.
+//  Created by YK Software Solutions on 06/01/15.
+//  Copyright (c) 2015 YK Software Solutions. All rights reserved.
 //
+
+
 
 #import <UIKit/UIKit.h>
 #import "CollapseClick.h"
@@ -12,7 +14,7 @@
 #import "CollapseClickCell.h"
 
 
-@interface ViewController : UIViewController <CollapseClickDelegate,UITextFieldDelegate> {
+@interface AgentDefaulterLoanVC : UIViewController <CollapseClickDelegate,UITextFieldDelegate> {
     IBOutlet UIView *test1View;
     IBOutlet UIView *test2View;
     IBOutlet UIView *test3View;

@@ -24,6 +24,24 @@
 @synthesize btnfourth;
 @synthesize controlGroup;
 @synthesize imgview_agentpro;
+@synthesize rowlabel_array;
+@synthesize lblcompleterecoveryvisit;
+@synthesize lblname_agnt;
+@synthesize lblpendingvisit;
+@synthesize amountrecovered;
+@synthesize recoverybonus;
+@synthesize strTotalnumberOfCompletedVisits;
+@synthesize strTotalnumberOfPendingVisits;
+@synthesize strTotalamountRecovered;
+@synthesize strTotalrecoveryBonus;
+@synthesize strname_lbl;
+@synthesize strTotalnumberOfCompletedVisits_string;
+@synthesize strTotalnumberOfPendingVisits_string;
+@synthesize strTotalamountRecovered_string;
+@synthesize strTotalrecoveryBonus_string;
+
+
+
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -38,6 +56,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+     //NSLog(@"rowlabel_array is%@",rowlabel_array);
+    NSLog(@"strTotalnumberOfCompletedVisits is %@",strTotalnumberOfCompletedVisits);
+     NSLog(@"strTotalnumberOfPendingVisits is %@",strTotalnumberOfPendingVisits);
+    NSLog(@"strTotalamountRecovered is %@",strTotalamountRecovered);
+    NSLog(@"strTotalrecoveryBonus is %@",strTotalrecoveryBonus);
+    NSLog(@"strname_lbl %@",strTotalamountRecovered);
+    
+    strTotalnumberOfCompletedVisits_string = [NSString stringWithFormat:@"%@", strTotalnumberOfCompletedVisits];
+    NSLog(@"qqqqqqqq %@",strTotalnumberOfCompletedVisits_string);
+    strTotalnumberOfPendingVisits_string = [NSString stringWithFormat:@"%@", strTotalnumberOfPendingVisits];
+   strTotalamountRecovered_string = [NSString stringWithFormat:@"%@", strTotalamountRecovered];
+   strTotalrecoveryBonus_string = [NSString stringWithFormat:@"%@", strTotalrecoveryBonus];
+
     self.view.backgroundColor=[UIColor colorWithRed:0.325 green:0.816 blue:1 alpha:1];
 
     //[self.navigationController setTitleView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"small.png"]]];
@@ -67,7 +98,8 @@
     name_lbl.font=[UIFont fontWithName:@"Helvetica" size:16];
    name_lbl.textColor = [UIColor whiteColor];
     name_lbl.backgroundColor = [UIColor clearColor];
-    name_lbl.text = @"Swati Rout";
+    name_lbl.text=lblname_agnt;
+   // name_lbl.text = lblpendingvisit;
     [agent_view addSubview:name_lbl];
     desig_lbl=[[UILabel alloc]initWithFrame:CGRectMake(85,30,200,20)];
    desig_lbl.font=[UIFont fontWithName:@"Helvetica-Bold" size:12];
@@ -75,74 +107,13 @@
    desig_lbl.backgroundColor = [UIColor clearColor];
     desig_lbl.text = @"Loan recovery Agent";
    [agent_view addSubview:desig_lbl];
-    agentdetails_array= @[@"0", @"1", @"2",@"3",@"4"];
+   // agentdetails_array= @[@"0", @"1", @"2",@"3",@"4"];
     agentdetails_tv =[[UITableView alloc] initWithFrame:CGRectMake(0,131,320,200) style:UITableViewStylePlain];
   [agentdetails_tv setSeparatorStyle: UITableViewCellSeparatorStyleSingleLine];
    agentdetails_tv.dataSource = self;
         agentdetails_tv.delegate = self;
     agentdetails_tv.scrollEnabled = YES;
   [self.view addSubview:agentdetails_tv];
-//    btnfirst = [UIButton buttonWithType: UIButtonTypeCustom];
-//    //btn1.tag = 1;
-//    [btnfirst setBackgroundImage:[UIImage imageNamed:
-//                              @"tennis18.png"]
-//                    forState:UIControlStateNormal];
-//    [btnfirst setBackgroundImage:[UIImage imageNamed:
-//                              @"trophy45.png"]
-//                        forState:UIControlStateSelected];
-//    [self.controlGroup addControl:btnfirst];
-//   
-//    [btnfirst setBackgroundColor: [UIColor lightGrayColor]];
-//    [btnfirst setFrame:CGRectMake(0,510,80,60)];
-//    
-//    [self.view addSubview:btnfirst];
-//    btnsecond = [UIButton buttonWithType: UIButtonTypeCustom];
-//    //btn1.tag = 1;
-//    [btnsecond setBackgroundImage:[UIImage imageNamed:
-//                                  @"walking17.png"]
-//                        forState:UIControlStateNormal];
-//    [btnsecond setBackgroundImage:[UIImage imageNamed:
-//                                  @"man271.png"]
-//                        forState:UIControlStateSelected];
-//    [self.controlGroup addControl:btnsecond];
-//    
-//    [btnsecond setBackgroundColor: [UIColor lightGrayColor]];
-//    [btnsecond setFrame:CGRectMake(80,510,80,60)];
-//    
-//    [self.view addSubview:btnsecond];
-//    btnthird = [UIButton buttonWithType: UIButtonTypeCustom];
-//    //btn1.tag = 1;
-//    [btnthird setBackgroundImage:[UIImage imageNamed:
-//                                   @"three115.png"]
-//                         forState:UIControlStateNormal];
-//    [btnthird setBackgroundImage:[UIImage imageNamed:
-//                                   @"magnifying4.png"]
-//                         forState:UIControlStateSelected];
-//    [self.controlGroup addControl:btnthird];
-//    
-//    [btnthird setBackgroundColor: [UIColor lightGrayColor]];
-//    [btnthird setFrame:CGRectMake(160,510,80,60)];
-//    
-//    [self.view addSubview:btnthird];
-//    
-//    
-//    
-//    
-//    
-//    btnfourth = [UIButton buttonWithType: UIButtonTypeCustom];
-//    //btn1.tag = 1;
-//    [btnfourth setBackgroundImage:[UIImage imageNamed:
-//                                  @"walking17.png"]
-//                        forState:UIControlStateNormal];
-//    [btnfourth setBackgroundImage:[UIImage imageNamed:
-//                                  @"man271.png"]
-//                        forState:UIControlStateSelected];
-//    [self.controlGroup addControl:btnfourth];
-//    
-//    [btnfourth setBackgroundColor: [UIColor lightGrayColor]];
-//    [btnfourth setFrame:CGRectMake(240,510,80,60)];
-//    
-//    [self.view addSubview:btnfourth];
     
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -152,8 +123,6 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-   
     return 50;
     //return [agentdetails_array count];
     //
@@ -163,7 +132,7 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
-    
+    //NSLog([rowlabel_array objectsAtIndexes:0]
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
@@ -172,107 +141,74 @@
         
     }
     
-   if( [indexPath row] % 2)
+    if( [indexPath row] % 2)
    [cell setBackgroundColor:[UIColor colorWithRed:0.325 green:0.816 blue:1 alpha:1]];
     else
       [cell setBackgroundColor:[UIColor colorWithRed:0.455 green:0.851 blue:0.996 alpha:1]];
-    //[cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-//    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 10, 30, 30)];
-//    cell.imageView.image = imgView.image;
-//    cell.imageView.backgroundColor=[UIColor clearColor];
-//    cell.imageView.layer.cornerRadius = 5.0;
-//    cell.imageView.layer.borderColor = [[UIColor colorWithRed:(38/255.f) green:(171/255.f) blue:(226/255.f) alpha:1.0f] CGColor];
-//    cell.imageView.layer.borderWidth = 1;
-//    cell.imageView.layer.masksToBounds = YES;
-    UILabel *lblCell=[[UILabel alloc]initWithFrame:CGRectMake(40, 10, 300, 20)];
+    UILabel *heading_lbl=[[UILabel alloc]initWithFrame:CGRectMake(40,10,200, 20)];
+    heading_lbl.font=[UIFont fontWithName:@"HelveticaNeue" size:12.0];
+    heading_lbl.textColor=[UIColor blackColor];
+
+    UILabel *lblCell=[[UILabel alloc]initWithFrame:CGRectMake(240,10,60, 20)];
 //lblCell.backgroundColor=[UIColor colorWithRed:0.302 green:0.569 blue:0.749 alpha:1];
  lblCell.font=[UIFont fontWithName:@"HelveticaNeue" size:12.0];
 //    
    lblCell.textColor=[UIColor blackColor];
     
+       // lblCell.text=strTotalnumberOfCompletedVisits_string;
+    [cell.contentView addSubview:lblCell];
     if (indexPath.row==0)
     {
-       lblCell.text=@"Completed Recovery Visits        : 10";
-      [cell.contentView addSubview:lblCell];
-//        //        //[cell.contentView addSubview:lblCellLine];
-//        //        imgView.image = [UIImage imageNamed:@"house.png"];
-//        //        imgView.frame=CGRectMake(20, 8, 30, 30);
-//        //        [cell.contentView addSubview:imgView];
-//        imgView.image = [UIImage imageNamed:@"img.png"];
-//        imgView.frame=CGRectMake(20, 8, 30, 30);
-//        
-//        [cell.contentView addSubview:imgView];
-//        
-//        lblCell.text=@"AGENT LOGIN";
-//        [cell.contentView addSubview:lblCell];
-//        //[cell.contentView addSubview:lblCellLine];
-//        //imgView.image = [UIImage imageNamed:@"search_new.png"];
-//        //imgView.frame=CGRectMake(20-2, 12+2, 25, 25);
-//        //[cell.contentView addSubview:imgView];
-//        
-//        
+        heading_lbl.text=@"Number of Completed Visits:";
+        [cell.contentView addSubview:heading_lbl];
+        lblCell.text=strTotalnumberOfCompletedVisits_string;
+        [cell.contentView addSubview:lblCell];
+       //lblCell.text=self.strTotalnumberOfCompletedVisits_string;
+//        strTotalnumberOfPendingVisits = [@"numberOfPendingVisits      :" stringByAppendingString:lblpendingvisit];
+//        lblCell.text=strTotalnumberOfPendingVisits;
+     //[cell.contentView addSubview:lblCell];
+
     }
     else if (indexPath.row==1)
     {
-        
-        lblCell.text=@"Unsuccessful Recovery Visits     : 2";
+        heading_lbl.text=@"Number of Pending Visits:";
+        [cell.contentView addSubview:heading_lbl];
+        lblCell.text=strTotalnumberOfPendingVisits_string;
         [cell.contentView addSubview:lblCell];
-//        imgView.image = [UIImage imageNamed:@"img.png"];
-//        imgView.frame=CGRectMake(20, 8, 30, 30);
-//        
-//        [cell.contentView addSubview:imgView];
-//        lblCell.text=@"CUSTOMER LOGIN";
-//        [cell.contentView addSubview:lblCell];
-//        //[cell.contentView addSubview:lblCellLine];
-//        //imgView.image = [UIImage imageNamed:@"listicon_new.png"];
-//        //imgView.frame=CGRectMake(20-2, 12, 25, 25);
-//        //[cell.contentView addSubview:imgView];
-//        
-//        
-//        //        lblCell.text=@"Profile";
-//        //        [cell.contentView addSubview:lblCell];
-//        //        [cell.contentView addSubview:lblCellLine];
-//        //        //imgView.image = [UIImage imageNamed:@"profiles.png"];
-//        //        //imgView.image = [UIImage imageNamed:@"setting_new.png"];
-//        //        imgView.image = [UIImage imageNamed:@"smallProfile_new.png"];
-//        //        imgView.frame=CGRectMake(20, 14, 25, 25);
-//        //
-//        //        [cell.contentView addSubview:imgView];
+       
+//        strTotalrecoveryBonus = [@"recoveryBonus     :" stringByAppendingString:recoverybonus];
+       //lblCell.text=strTotalnumberOfPendingVisits;
+//
+       //[cell.contentView addSubview:lblCell];
+
     }
     else if (indexPath.row==2)
     {
-        
-        lblCell.text=@"Pending Recovery Visits             : 25";
+        heading_lbl.text=@"Amount Recovered:";
+        [cell.contentView addSubview:heading_lbl];
+        lblCell.text=strTotalamountRecovered_string;
         [cell.contentView addSubview:lblCell];
-//        imgView.image = [UIImage imageNamed:@"img.png"];
-//        imgView.frame=CGRectMake(20, 8, 30, 30);
-//        
-//        [cell.contentView addSubview:imgView];
-//        lblCell.text=@"BRANCH LOCATOR";
-//        [cell.contentView addSubview:lblCell];
+
+        
+        
+//        strTotalnumberOfCompletedVisits = [@"numberOfCompletedVisits     :" stringByAppendingString:lblcompleterecoveryvisit];
+        //lblCell.text=strTotalamountRecovered;
+        //[cell.contentView addSubview:lblCell];
     }
     else if (indexPath.row==3)
   {
-      lblCell.text=@"Account recovered                     : Rs 50,000";
+      heading_lbl.text=@"Recovery Bonus:";
+      [cell.contentView addSubview:heading_lbl];
+      lblCell.text=strTotalrecoveryBonus_string;
       [cell.contentView addSubview:lblCell];
-//        imgView.image = [UIImage imageNamed:@"img.png"];
-//        imgView.frame=CGRectMake(20, 8, 30, 30);
-//        
-//        [cell.contentView addSubview:imgView];
-//        lblCell.text=@"CONTACT US";
-//        [cell.contentView addSubview:lblCell];
+      
+
+//      strTotalamountRecovered = [@"amountRecovered     :" stringByAppendingString:lblpendingvisit];
+      //lblCell.text=strTotalrecoveryBonus;
+     //[cell.contentView addSubview:lblCell];
+
     }
-    else if (indexPath.row==4)
-    {
-        lblCell.text=@"Allowance                                   : Rs 400";
-        [cell.contentView addSubview:lblCell];
-//        imgView.image = [UIImage imageNamed:@"img.png"];
-//        imgView.frame=CGRectMake(20, 8, 30, 30);
-//        
-//        [cell.contentView addSubview:imgView];
-//        lblCell.text=@"FEEDBACK";
-//        [cell.contentView addSubview:lblCell];
-   }
+
     return cell;
 }
 
@@ -280,7 +216,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    
+    NSLog(@"strTotalnumberOfCompletedVisits is %@",strTotalnumberOfCompletedVisits_string);
     
     
 }

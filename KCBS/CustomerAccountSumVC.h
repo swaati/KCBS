@@ -14,12 +14,6 @@
 {
     
     
-    IBOutlet UIView *test1View;
-    
-   
-    
-    IBOutlet UIView *test2View;
-    
     
     __weak IBOutlet CollapseClick *myCollapseClick;
     
@@ -29,6 +23,28 @@
 @property (strong,nonatomic) UILabel *welcome_label;
 @property (strong,nonatomic) UILabel *name_label;
 @property (nonatomic,strong) UIImageView *imgview_customacc;
+@property (nonatomic,strong)UIView *savingsacc_view;
+@property (nonatomic,strong)UIView *fixeddeposit_view;
+@property(nonatomic,strong)UILabel *savingac_lbl;
+@property(nonatomic,strong)UILabel *savingac_lblblue;
+@property(nonatomic,strong)UILabel *savingopendate_lbl;
+@property(nonatomic,strong)UILabel *savingopendate_lblblue;
+@property(nonatomic,strong)UILabel *savingbalance_lbl;
+@property(nonatomic,strong)UILabel *savingbalance_lblblue;
+@property (nonatomic,strong)UILabel *savingstatus_lbl;
+@property (nonatomic,strong)UILabel *savingstatus_lblblue;
+
+@property(nonatomic,strong)UILabel *fixedaccno_lbl;
+@property(nonatomic,strong)UILabel *fixedaccno_lblbllue;
+@property(nonatomic,strong)UILabel *fixedopendate_lbl;
+@property(nonatomic,strong)UILabel *fixedopendate_lblbllue;
+@property(nonatomic,strong)UILabel *fixeddepttype_lbl;
+@property(nonatomic,strong)UILabel *fixeddepttype_lblblue;
+@property(nonatomic,strong)UILabel *fixedamount_lbl;
+@property(nonatomic,strong)UILabel *fixedamount_lblblue;
+@property(nonatomic,strong)UILabel *fixedstatus_lbl;
+@property(nonatomic,strong)UILabel *fixedstatus_lblblue;
+
 //@property (nonatomic,strong) UILabel *cusname_label;
 
 @end

@@ -17,6 +17,27 @@
 @synthesize welcome_label;
 @synthesize name_label;
 @synthesize imgview_customacc;
+@synthesize savingsacc_view;
+@synthesize fixeddeposit_view;
+@synthesize savingac_lbl;
+@synthesize savingac_lblblue;
+@synthesize savingopendate_lbl;
+@synthesize savingopendate_lblblue;
+@synthesize savingbalance_lbl;
+@synthesize savingbalance_lblblue;
+@synthesize savingstatus_lbl;
+@synthesize savingstatus_lblblue;
+
+@synthesize fixedaccno_lbl;
+@synthesize fixedaccno_lblbllue;
+@synthesize fixedopendate_lbl;
+@synthesize fixedopendate_lblbllue;
+@synthesize fixeddepttype_lbl;
+@synthesize fixeddepttype_lblblue;
+@synthesize fixedamount_lbl;
+@synthesize fixedamount_lblblue;
+@synthesize fixedstatus_lbl;
+@synthesize fixedstatus_lblblue;
 //@synthesize cusname_label;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -65,6 +86,174 @@
     return 30;
 }
 -(NSString *)titleForCollapseClickAtIndex:(int)index {
+//    @synthesize savingsacc_view;
+//    @synthesize fixeddeposit_view;
+//    @synthesize savingac_lbl;
+//    @synthesize savingac_lblblue;
+//    @synthesize savingopendate_lbl;
+//    @synthesize savingopendate_lblblue;
+//    @synthesize savingbalance_lbl;
+//    @synthesize savingbalance_lblblue;
+//    @synthesize savingstatus_lbl;
+//    @synthesize savingstatus_lblblue;
+//    
+//    @synthesize fixedaccno_lbl;
+//    @synthesize fixedaccno_lblbllue;
+//    @synthesize fixedopendate_lbl;
+//    @synthesize fixedopendate_lblbllue;
+//    @synthesize fixeddepttype_lbl;
+//    @synthesize fixeddepttype_lblblue;
+//    @synthesize fixedamount_lbl;
+//    @synthesize fixedamount_lblblue;
+//    @synthesize fixedstatus_lbl;
+//    @synthesize fixedstatus_lblblue;
+    savingsacc_view=[[UIView alloc]initWithFrame:CGRectMake(0,0, 320,110)];
+      // savingsacc_view.backgroundColor=[UIColor colorWithRed:0.965 green:0.506 blue:0.129 alpha:1];;
+      //[self.view addSubview:savingsacc_view];
+    savingac_lbl=[[UILabel alloc]initWithFrame:CGRectMake(20,10,140,20)];
+    savingac_lbl.font=[UIFont fontWithName:@"Helvetica" size:14];
+    savingac_lbl.textColor = [UIColor blackColor];
+    savingac_lbl.backgroundColor = [UIColor clearColor];
+    savingac_lbl.text = @"Ac No";
+    [savingsacc_view addSubview:savingac_lbl];
+    savingac_lblblue=[[UILabel alloc]initWithFrame:CGRectMake(160,10,140,20)];
+    savingac_lblblue.backgroundColor=[UIColor blueColor];
+    savingac_lblblue.font=[UIFont fontWithName:@"Helvetica" size:14];
+    savingac_lblblue.textColor = [UIColor blackColor];
+    savingac_lblblue.backgroundColor = [UIColor colorWithRed:0.208 green:0.682 blue:0.949 alpha:1];
+    savingac_lblblue.text = @"AP-001-SB-000448";
+    [savingsacc_view addSubview:savingac_lblblue];
+    
+    
+    savingopendate_lbl=[[UILabel alloc]initWithFrame:CGRectMake(20,35,140,20)];
+    savingopendate_lbl.font=[UIFont fontWithName:@"Helvetica" size:14];
+    savingopendate_lbl.textColor = [UIColor blackColor];
+    savingopendate_lbl.backgroundColor = [UIColor clearColor];
+    savingopendate_lbl.text = @"Open Date";
+    [savingsacc_view addSubview:savingopendate_lbl];
+    savingopendate_lblblue=[[UILabel alloc]initWithFrame:CGRectMake(160,35,140,20)];
+    savingopendate_lblblue.backgroundColor=[UIColor blueColor];
+    savingopendate_lblblue.font=[UIFont fontWithName:@"Helvetica" size:14];
+    savingopendate_lblblue.textColor = [UIColor blackColor];
+    savingopendate_lblblue.backgroundColor = [UIColor colorWithRed:0.208 green:0.682 blue:0.949 alpha:1];
+    savingopendate_lblblue.text = @"13 Nov 1999";
+    [savingsacc_view addSubview:savingopendate_lblblue];
+    
+    
+    savingbalance_lbl=[[UILabel alloc]initWithFrame:CGRectMake(20,60,140,20)];
+    savingbalance_lbl.font=[UIFont fontWithName:@"Helvetica" size:14];
+    savingbalance_lbl.textColor = [UIColor blackColor];
+    savingbalance_lbl.backgroundColor = [UIColor clearColor];
+    savingbalance_lbl.text = @"Balance";
+    [savingsacc_view addSubview:savingbalance_lbl];
+    savingbalance_lblblue=[[UILabel alloc]initWithFrame:CGRectMake(160,60,140,20)];
+    savingbalance_lblblue.backgroundColor=[UIColor blueColor];
+    savingbalance_lblblue.font=[UIFont fontWithName:@"Helvetica" size:14];
+    savingbalance_lblblue.textColor = [UIColor blackColor];
+    savingbalance_lblblue.backgroundColor = [UIColor colorWithRed:0.208 green:0.682 blue:0.949 alpha:1];
+    savingbalance_lblblue.text = @"Rs 354";
+    [savingsacc_view addSubview:savingbalance_lblblue];
+    
+    
+    savingstatus_lbl=[[UILabel alloc]initWithFrame:CGRectMake(20,85,140,20)];
+    savingstatus_lbl.font=[UIFont fontWithName:@"Helvetica" size:14];
+    savingstatus_lbl.textColor = [UIColor blackColor];
+    savingstatus_lbl.backgroundColor = [UIColor clearColor];
+    savingstatus_lbl.text = @"Status";
+    [savingsacc_view addSubview:savingstatus_lbl];
+    savingstatus_lblblue=[[UILabel alloc]initWithFrame:CGRectMake(160,85,140,20)];
+    savingstatus_lblblue.backgroundColor=[UIColor blueColor];
+    savingstatus_lblblue.font=[UIFont fontWithName:@"Helvetica" size:14];
+    savingstatus_lblblue.textColor = [UIColor blackColor];
+    savingstatus_lblblue.backgroundColor = [UIColor colorWithRed:0.208 green:0.682 blue:0.949 alpha:1];
+    savingstatus_lblblue.text = @"Approved";
+    [savingsacc_view addSubview:savingstatus_lblblue];
+    
+    
+    //for fixeddeposit
+    fixeddeposit_view=[[UIView alloc]initWithFrame:CGRectMake(0,0, 320,130)];
+    // savingsacc_view.backgroundColor=[UIColor colorWithRed:0.965 green:0.506 blue:0.129 alpha:1];;
+    //[self.view addSubview:savingsacc_view];
+    fixedaccno_lbl=[[UILabel alloc]initWithFrame:CGRectMake(20,10,140,20)];
+    fixedaccno_lbl.font=[UIFont fontWithName:@"Helvetica" size:14];
+    fixedaccno_lbl.textColor = [UIColor blackColor];
+    fixedaccno_lbl.backgroundColor = [UIColor clearColor];
+    fixedaccno_lbl.text = @"Ac No";
+    [fixeddeposit_view addSubview:fixedaccno_lbl];
+    fixedaccno_lblbllue=[[UILabel alloc]initWithFrame:CGRectMake(160,10,140,20)];
+    fixedaccno_lblbllue.backgroundColor=[UIColor blueColor];
+    fixedaccno_lblbllue.font=[UIFont fontWithName:@"Helvetica" size:14];
+    fixedaccno_lblbllue.textColor = [UIColor blackColor];
+    fixedaccno_lblbllue.backgroundColor = [UIColor colorWithRed:0.208 green:0.682 blue:0.949 alpha:1];
+    fixedaccno_lblbllue.text = @"AP-001-FD-I-154";
+    [fixeddeposit_view addSubview:fixedaccno_lblbllue];
+    
+    
+    fixedopendate_lbl=[[UILabel alloc]initWithFrame:CGRectMake(20,35,140,20)];
+    fixedopendate_lbl.font=[UIFont fontWithName:@"Helvetica" size:14];
+    fixedopendate_lbl.textColor = [UIColor blackColor];
+    fixedopendate_lbl.backgroundColor = [UIColor clearColor];
+    fixedopendate_lbl.text = @"Open Date";
+    [fixeddeposit_view addSubview:fixedopendate_lbl];
+    fixedopendate_lblbllue=[[UILabel alloc]initWithFrame:CGRectMake(160,35,140,20)];
+    fixedopendate_lblbllue.backgroundColor=[UIColor blueColor];
+    fixedopendate_lblbllue.font=[UIFont fontWithName:@"Helvetica" size:14];
+    fixedopendate_lblbllue.textColor = [UIColor blackColor];
+    fixedopendate_lblbllue.backgroundColor = [UIColor colorWithRed:0.208 green:0.682 blue:0.949 alpha:1];
+    fixedopendate_lblbllue.text = @"13 Nov 1999";
+    [fixeddeposit_view addSubview:fixedopendate_lblbllue];
+    
+    
+    fixeddepttype_lbl=[[UILabel alloc]initWithFrame:CGRectMake(20,60,140,20)];
+    fixeddepttype_lbl.font=[UIFont fontWithName:@"Helvetica" size:14];
+    fixeddepttype_lbl.textColor = [UIColor blackColor];
+    fixeddepttype_lbl.backgroundColor = [UIColor clearColor];
+    fixeddepttype_lbl.text = @"Dept type";
+    [fixeddeposit_view addSubview:fixeddepttype_lbl];
+    fixeddepttype_lblblue=[[UILabel alloc]initWithFrame:CGRectMake(160,60,140,20)];
+    fixeddepttype_lblblue.backgroundColor=[UIColor blueColor];
+    fixeddepttype_lblblue.font=[UIFont fontWithName:@"Helvetica" size:14];
+    fixeddepttype_lblblue.textColor = [UIColor blackColor];
+    fixeddepttype_lblblue.backgroundColor = [UIColor colorWithRed:0.208 green:0.682 blue:0.949 alpha:1];
+    fixeddepttype_lblblue.text = @"CUML";
+    [fixeddeposit_view addSubview:fixeddepttype_lblblue];
+    
+    
+    fixedamount_lbl=[[UILabel alloc]initWithFrame:CGRectMake(20,85,140,20)];
+    fixedamount_lbl.font=[UIFont fontWithName:@"Helvetica" size:14];
+    fixedamount_lbl.textColor = [UIColor blackColor];
+    fixedamount_lbl.backgroundColor = [UIColor clearColor];
+    fixedamount_lbl.text = @"Amount";
+    [fixeddeposit_view addSubview:fixedamount_lbl];
+    fixedamount_lblblue=[[UILabel alloc]initWithFrame:CGRectMake(160,85,140,20)];
+    fixedamount_lblblue.backgroundColor=[UIColor blueColor];
+    fixedamount_lblblue.font=[UIFont fontWithName:@"Helvetica" size:14];
+    fixedamount_lblblue.textColor = [UIColor blackColor];
+    fixedamount_lblblue.backgroundColor = [UIColor colorWithRed:0.208 green:0.682 blue:0.949 alpha:1];
+    fixedamount_lblblue.text = @"Rs500";
+    [fixeddeposit_view addSubview:fixedamount_lblblue];
+    
+    
+
+
+    
+    
+    
+    
+    fixedstatus_lbl=[[UILabel alloc]initWithFrame:CGRectMake(20,110,140,20)];
+    fixedstatus_lbl.font=[UIFont fontWithName:@"Helvetica" size:14];
+    fixedstatus_lbl.textColor = [UIColor blackColor];
+    fixedstatus_lbl.backgroundColor = [UIColor clearColor];
+    fixedstatus_lbl.text = @"Status";
+    [fixeddeposit_view addSubview:fixedstatus_lbl];
+    fixedstatus_lblblue=[[UILabel alloc]initWithFrame:CGRectMake(160,110,140,20)];
+    fixedstatus_lblblue.backgroundColor=[UIColor blueColor];
+    fixedstatus_lblblue.font=[UIFont fontWithName:@"Helvetica" size:14];
+    fixedstatus_lblblue.textColor = [UIColor blackColor];
+    fixedstatus_lblblue.backgroundColor = [UIColor colorWithRed:0.208 green:0.682 blue:0.949 alpha:1];
+    fixedstatus_lblblue.text = @"Approved";
+    [fixeddeposit_view addSubview:fixedstatus_lblblue];
+
     //    agent_view=[[UIView alloc]initWithFrame:CGRectMake(0,0, 320,250)];
     //    agent_view.backgroundColor=[UIColor colorWithRed:0.965 green:0.506 blue:0.129 alpha:1];;
     //    [self.view addSubview:agent_view];
@@ -114,16 +303,17 @@
 -(UIView *)viewForCollapseClickContentViewAtIndex:(int)index {
     switch (index) {
         case 0:
-            return test1View;
+            return savingsacc_view;
             break;
         case 1:
-            return test2View;
+           return fixeddeposit_view;
             break;
 
        default:
             return NULL;
            break;
     }
+
 }
 
 -(UIColor *)colorForCollapseClickTitleViewAtIndex:(int)index {
@@ -157,7 +347,7 @@
 
 // Example of change content view frame and then update collapseClick layout.
 - (IBAction)buttonClicked:(id)sender {
-    test1View.frame = CGRectMake(0, 0, test1View.frame.size.width, test1View.frame.size.height + 50);
+   // test1View.frame = CGRectMake(0, 0, test1View.frame.size.width, test1View.frame.size.height + 50);
     [myCollapseClick setNeedsLayout];
 }
 

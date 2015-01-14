@@ -103,6 +103,7 @@
 		C02139B11A403DE600BA3CB6 /* AgentLoanViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C02139AF1A403DE500BA3CB6 /* AgentLoanViewVC.xib */; };
 		C02402FB1A35B8DA00BBAE36 /* CustomerAddremindersVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C02402F91A35B8DA00BBAE36 /* CustomerAddremindersVC.m */; };
 		C02402FC1A35B8DA00BBAE36 /* CustomerAddremindersVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C02402FA1A35B8DA00BBAE36 /* CustomerAddremindersVC.xib */; };
+		C02736481A667F5D0029EB69 /* LoanView.json in Resources */ = {isa = PBXBuildFile; fileRef = C02736471A667F5D0029EB69 /* LoanView.json */; };
 		C02A1EA91A5FB0B6006402B5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02A1EA81A5FB0B6006402B5 /* CoreData.framework */; };
 		C02A1EAC1A5FB2C2006402B5 /* KCBS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C02A1EAA1A5FB2C2006402B5 /* KCBS.xcdatamodeld */; };
 		C0640FD11A232E270035CEDA /* RemindersVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C0640FD01A232E270035CEDA /* RemindersVC.m */; };
@@ -257,6 +258,7 @@
 		C02402F81A35B8DA00BBAE36 /* CustomerAddremindersVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerAddremindersVC.h; sourceTree = "<group>"; };
 		C02402F91A35B8DA00BBAE36 /* CustomerAddremindersVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerAddremindersVC.m; sourceTree = "<group>"; };
 		C02402FA1A35B8DA00BBAE36 /* CustomerAddremindersVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomerAddremindersVC.xib; sourceTree = "<group>"; };
+		C02736471A667F5D0029EB69 /* LoanView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = LoanView.json; path = ../../LoanView.json; sourceTree = "<group>"; };
 		C02A1EA81A5FB0B6006402B5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		C02A1EAB1A5FB2C2006402B5 /* KCBS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KCBS.xcdatamodel; sourceTree = "<group>"; };
 		C0640FCF1A232E270035CEDA /* RemindersVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindersVC.h; sourceTree = "<group>"; };
@@ -449,6 +451,7 @@
 		C013D7071A49A0E100C203E9 /* JSON  */ = {
 			isa = PBXGroup;
 			children = (
+				C02736471A667F5D0029EB69 /* LoanView.json */,
 				C018E8781A4D7E5A00E8D2E8 /* AgentRecovery.json */,
 				C018E8761A4D716100E8D2E8 /* DefaulterLoans.json */,
 				C013D7081A49A10C00C203E9 /* json.json */,
@@ -692,6 +695,7 @@
 				C0FEB7F81A3859D600FA7C38 /* agentLoginBIcon.png in Resources */,
 				C009AE881A39A01700A2F255 /* biglogo.png in Resources */,
 				C00E353F1A383125000C1DE5 /* sharesIcon.png in Resources */,
+				C02736481A667F5D0029EB69 /* LoanView.json in Resources */,
 				C01C64D21A396C800023F9A7 /* recoveryVisitIcon_Small.png in Resources */,
 				C01C64D01A396C650023F9A7 /* profileIcon_Small.png in Resources */,
 				C01170611A20AD3B000A88CC /* walking17.png in Resources */,

@@ -521,7 +521,7 @@
                 loan_address_blue.font=[UIFont fontWithName:@"Helvetica" size:14];
                 loan_address_blue.textColor = [UIColor blackColor];
                 loan_address_blue.backgroundColor =[UIColor colorWithRed:0.208 green:0.682 blue:0.949 alpha:1];
-
+//
                 loan_address_blue.text = @"sadfjsilf dsjnfkdnf dfsf";
                 [loaneeview addSubview:loan_address_blue];
                 switch (index) {

@@ -43,13 +43,15 @@
     @synthesize arrloan;
     @synthesize sw;
     @synthesize TIGER;
+    @synthesize recovery_array;
+@synthesize arrofRecovery;
 
     //@synthesize myCollapseClick;
     //@synthesize name_lbl;
     - (void)viewDidLoad
     {
         arrloan=[[NSMutableArray alloc]init];
-        
+        arrofRecovery=[[NSMutableArray alloc]init];
         [super viewDidLoad];
         [self callservice];
         //UILabel *lbl1=(UILabel *)[cell viewWithTag:101];
@@ -276,6 +278,9 @@
         [visit_btn setTitle:@"VISIT" forState:UIControlStateNormal];
         [visit_btn setTitleColor:[UIColor whiteColor] forState:
          UIControlStateNormal];
+        [visit_btn addTarget:self
+                          action:@selector(visit_btn_Clicked)
+                forControlEvents:UIControlEventTouchUpInside];
         [agent_view addSubview:visit_btn];
         UIButton *reminder_btn = [UIButton buttonWithType: UIButtonTypeRoundedRect];
         [reminder_btn setFrame:CGRectMake(130,130,180, 30)];
@@ -283,6 +288,9 @@
         [reminder_btn setTitle:@"SET REMINDER" forState:UIControlStateNormal];
         [reminder_btn setTitleColor:[UIColor whiteColor] forState:
          UIControlStateNormal];
+        [reminder_btn addTarget:self
+                      action:@selector(reminder_btn_Clicked)
+            forControlEvents:UIControlEventTouchUpInside];
         [agent_view addSubview:reminder_btn];
         
         
@@ -294,6 +302,7 @@
         
         switch (index) {
             case 0:
+                visit_btn.tag=index;
                 name_label1.text= [loans_array[index] valueForKey:@"Name"];
          phone_label1.text =[loans_array[index] valueForKey:@"Phone No"];
                 add_label1.text=[loans_array[index] valueForKey:@"Address"];
@@ -328,6 +337,7 @@
                 break;
             case 1:
               //return test2View;
+                visit_btn.tag=index;
                 name_label1.text= [loans_array[index] valueForKey:@"Name"];
                 phone_label1.text =[loans_array[index] valueForKey:@"Phone No"];
                 add_label1.text=[loans_array[index] valueForKey:@"Address"];
@@ -338,6 +348,7 @@
                // break;
             case 2:
                 //return test3View;
+                visit_btn.tag=index;
                 name_label1.text= [loans_array[index] valueForKey:@"Name"];
                 phone_label1.text =[loans_array[index] valueForKey:@"Phone No"];
                 add_label1.text=[loans_array[index] valueForKey:@"Address"];
@@ -348,6 +359,7 @@
                // break;
             case 3:
                 //return test4View;
+                visit_btn.tag=index;
                 name_label1.text= [loans_array[index] valueForKey:@"Name"];
                 phone_label1.text =[loans_array[index] valueForKey:@"Phone No"];
                 add_label1.text=[loans_array[index] valueForKey:@"Address"];
@@ -434,6 +446,61 @@
         agent_view.frame = CGRectMake(0, 0, agent_view.frame.size.width,agent_view.frame.size.height + 50);
         [myCollapseClick setNeedsLayout];
     }
+-(void)visit_btn_Clicked:(UIButton *)sender{
+    NSLog(@"you were clicked with %d",[sender tag]);
+    RecoveryVisitVC *recvisit=[[RecoveryVisitVC alloc] init];
+    [self.navigationController pushViewController:recvisit animated:YES];
+    recvisit=nil;
+    [self callrecoveryservice];
+     NSLog(@"arrResults2 %d",arrofRecovery.count);
+    //arrofRecovery=[[NSMutableArray alloc]init];
+    
+     //NSLog(@"titleForCollapseClickAtIndex%@",[self titleForCollapseClickAtIndex:0]);
+    NSPredicate *predicate=[NSPredicate predicateWithFormat:@"strloan_no=%@",@"AP-001-HL-000123"];
+    NSArray * arrResults2=[arrofRecovery filteredArrayUsingPredicate:predicate];
+   
+ RecoveryObject *dic=arrResults2[0];
+  // NSLog(@"recovered%@",dic.description);
+    NSLog(@"recovered is 2%@",dic.strphno);
+ NSLog(@"recovered is 3%@",dic.strloan_no);
+//    
 
+    }
+-(void)reminder_btn_Clicked{
+    RemindersVC *reminders=[[RemindersVC alloc]init];
+    [self.navigationController pushViewController:reminders animated:YES];
+    reminders=nil;
+}
+-(void)callrecoveryservice
+{
+    //NSMutableArray *arrRecovery=[[NSMutableArray alloc]init];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"AgentRecovery" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    recovery_array = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    NSLog(@"Array rcovery : %@", recovery_array);
+    
+    for(NSDictionary *agentrecovery in recovery_array)
+        
+    {
+        
+        RecoveryObject *objrec = [[RecoveryObject alloc]init];
+        objrec.strloan_no=[agentrecovery valueForKey:@"Loan No"];
+        objrec.stroutstandingamnt=[agentrecovery valueForKey:@"Outstanding Amount"];
+        objrec.strintrstrisk=[agentrecovery valueForKey:@"Interest Risk"];
+        objrec.strloanqlity=[agentrecovery valueForKey:@"Loan Quality"];
+        objrec.strcurntstatus=[agentrecovery valueForKey:@"Current Status"];
+        objrec.strprinciple=[agentrecovery valueForKey:@"Principle"];
+        objrec.strintrst=[agentrecovery valueForKey:@"Interest"];
+        objrec.strpenal=[agentrecovery valueForKey:@"PenalInterest"];
+        objrec.strotherchrge=[agentrecovery valueForKey:@"(Other Charges)"];
+        objrec.strtotal=[agentrecovery valueForKey:@"Total"];
+        objrec.strname=[agentrecovery valueForKey:@"Name"];
+        objrec.strphno=[agentrecovery valueForKey:@"Phone No"];
+        objrec.straddress=[agentrecovery valueForKey:@"Address"];
+        [arrofRecovery addObject:objrec];
+        
+    }
+    NSLog(@"array filled is%@", arrofRecovery.description);
+  }
 
     @end

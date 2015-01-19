@@ -12,6 +12,9 @@
     #import "CollapseClick.h"
     #import "LoanObject.h"
     #import "CollapseClickCell.h"
+#import "RecoveryVisitVC.h"
+#import "RemindersVC.h"
+#import "RecoveryObject.h"
 
 
     @interface AgentDefaulterLoanVC : UIViewController <CollapseClickDelegate,UITextFieldDelegate> {
@@ -47,6 +50,8 @@
     @property(nonatomic,strong)NSMutableArray *arrloan;
     @property(nonatomic,strong)NSDictionary *sw;
     @property(nonatomic,strong)NSString *TIGER;
+@property(nonatomic,strong)NSMutableArray *recovery_array;
+@property(nonatomic,strong)NSMutableArray *arrofRecovery;
 
     //@property (nonatomic,strong)CollapseClick *myCollapseClick;
 

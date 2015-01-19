@@ -483,10 +483,10 @@
                            [loanee_view addSubview:loniadrs_lbl1];
 
 
-
+ 
 
                         }
-           
+          
         }
 
         #pragma mark - Collapse Click Delegate

@@ -455,7 +455,7 @@
         
         RecoveryVisitVC *recvisit=[[RecoveryVisitVC alloc] init];
         [self.navigationController pushViewController:recvisit animated:YES];
-        recvisit=nil;
+        
         [self callrecoveryservice];
          NSLog(@"arrResults2 %@",[[arrofRecovery objectAtIndex:[sender tag]] valueForKey:@"strloan_no"]);
         //arrofRecovery=[[NSMutableArray alloc]init];
@@ -465,10 +465,21 @@
         NSArray * arrResults2=[arrofRecovery filteredArrayUsingPredicate:predicate];
        
      RecoveryObject *dic=arrResults2[0];
-      // NSLog(@"recovered%@",dic.description);
-        NSLog(@"recovered is 2%@",dic.strphno);
-     NSLog(@"recovered is 3%@",dic.strloan_no);
-    //    
+     
+                recvisit.passedloanno=dic.strloan_no;
+                        recvisit.passedoutstandingamount=dic.stroutstandingamnt;
+                recvisit.passedinterestrisk=dic.strintrstrisk;
+                  recvisit.passedloanquality=dic.strloanqlity;
+               recvisit.passedcurrentstatus=dic.strcurntstatus;
+               recvisit.passedprinciple=dic.strprinciple;
+              recvisit.passedinterest=dic.strintrst;
+               recvisit.passedpenalinterest=dic.strpenal;
+                recvisit.passedothercharges=dic.strotherchrge;
+                recvisit.passedtotal=dic.strtotal;
+               recvisit.passedname=dic.strname;
+                recvisit.passedphoneno=dic.strphno;
+                recvisit.passedaddress=dic.straddress;
+          
 
         }
     -(void)reminder_btn_Clicked{

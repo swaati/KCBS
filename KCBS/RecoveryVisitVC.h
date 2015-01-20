@@ -71,7 +71,6 @@
     @property(nonatomic,strong)UILabel *othercharges_lbl1;
     @property(nonatomic,strong)UILabel *totlbl;
     @property(nonatomic,strong)UILabel *totlbl1;
-
     @property (nonatomic,strong)UIView *loanee_view;
     @property (nonatomic,strong)UILabel *loniname_lbl;
     @property (nonatomic,strong)UILabel *loniname_lbl1;
@@ -79,34 +78,36 @@
     @property (nonatomic,strong)UILabel *loniphno_lbl1;
     @property (nonatomic,strong)UILabel *loniadrs_lbl;
     @property (nonatomic,strong)UILabel *loniadrs_lbl1;
-
-
-    //@property (nonatomic,strong)CollapseClick *myCollapseClick;
     @property (nonatomic,strong)UIView *others_view;
     @property (nonatomic,strong)UILabel *lonname_lbl;
     @property (nonatomic,strong)UILabel *lonname_lbl1;
-    @property (nonatomic,strong)NSString *tigger;
-    //@property (nonatomic,strong)NSString *straight;
-
+@property(nonatomic,strong)NSString *passedloanno;
+@property(nonatomic,strong)NSString *passedloanno_string;
+@property(nonatomic,strong)NSString *passedoutstandingamount;
+@property(nonatomic,strong)NSString *passedoutstandingamount_string;
+@property(nonatomic,strong)NSString *passedinterestrisk;
+@property(nonatomic,strong)NSString *passedinterestrisk_string;
+@property(nonatomic,strong)NSString *passedloanquality;
+@property(nonatomic,strong)NSString *passedloanquality_string;
+@property(nonatomic,strong)NSString *passedcurrentstatus;
+@property(nonatomic,strong)NSString *passedcurrentstatus_string;
+@property(nonatomic,strong)NSString *passedprinciple;
+@property(nonatomic,strong)NSString *passedprinciple_string;
+@property(nonatomic,strong)NSString *passedinterest;
+@property(nonatomic,strong)NSString *passedinterest_string;
+@property(nonatomic,strong)NSString *passedpenalinterest;
+@property(nonatomic,strong)NSString *passedpenalinterest_string;
+@property(nonatomic,strong)NSString *passedothercharges;
+@property(nonatomic,strong)NSString *passedothercharges_string;
+@property(nonatomic,strong)NSString *passedtotal;
+@property(nonatomic,strong)NSString *passedtotal_string;
+@property(nonatomic,strong)NSString *passedname;
+@property(nonatomic,strong)NSString *passedname_string;
+@property(nonatomic,strong)NSString *passedphoneno;
+@property(nonatomic,strong)NSString *passedphoneno_string;
+@property(nonatomic,strong)NSString *passedaddress;
+@property(nonatomic,strong)NSString *passedaddress_string;
+ 
     @end
 
         
-    //    
-    //    __weak IBOutlet CollapseClick *myCollapseClick;
-    //}
-    //@property (nonatomic,strong)UIView *recovery_view;
-    //@property (nonatomic,strong)UILabel *recovery_lbl;
-    //@property (nonatomic,strong)UIView *agent_view;
-    ////@property (nonatomic,strong)UILabel *name_lbl;
-    //@property (nonatomic,strong)UILabel *name_label;
-    //@property (nonatomic,strong)UIImageView *imgview_agentrecovery;
-    //@property (nonatomic,strong)UIView *loanmember_view;
-    //@property (nonatomic,strong)UILabel *firstdatelbl;
-    //@property (nonatomic,strong)UILabel *firstagentlbl;
-    //@property(nonatomic,strong)UILabel *firstresultlbl;
-    //@property(nonatomic,strong)UILabel *agentcomtlbl;
-    //@property(nonatomic,strong)UILabel *loaneecomtlbl;
-    //@property(nonatomic,strong)UIButton *save_btn;
-    //@property(nonatomic,strong)UIButton *reset_btn;
-    //@property(nonatomic,strong)UIButton *back_btn;
-    //@end

@@ -163,6 +163,7 @@
                                             tag:2];
             
             RecoveryVisitVC *recoveryvisit_vc=[[RecoveryVisitVC alloc]init];
+        
             [tabViewControllers addObject:recoveryvisit_vc];
             recoveryvisit_vc.tabBarItem= [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"RecoveryVisit", nil)
                                                                        image:[UIImage imageNamed:@"recoveryVisitIcon_Small.png"]

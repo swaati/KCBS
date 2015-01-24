@@ -11,7 +11,7 @@
         #import "CollapseClick.h"
         #import "RecoveryObject.h"
 
-        @interface RecoveryVisitVC : UIViewController <CollapseClickDelegate,UITextFieldDelegate,UITableViewDataSource,UITableViewDelegate> {
+        @interface RecoveryVisitVC : UIViewController <CollapseClickDelegate,UITextFieldDelegate,UITableViewDataSource,UITableViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate> {
             IBOutlet UIView *test1View;
             IBOutlet UIView *test2View;
             IBOutlet UIView *test3View;
@@ -19,6 +19,18 @@
             IBOutlet UIView *test4View;
             __weak IBOutlet CollapseClick *myCollapseClick;
         }
+@property(nonatomic,strong)NSArray *pickresult_array;
+@property(nonatomic,strong)UIPickerView *result_picker;
+@property(nonatomic,strong)UIDatePicker *pickdate;
+//@property(nonatomic,strong)UIDatePicker *pick;
+@property(nonatomic,strong) UIBarButtonItem *flexSpace;
+@property(nonatomic,strong) UIBarButtonItem *doneButton;
+@property(nonatomic,strong)UIToolbar *toolBar;
+@property(nonatomic,strong) NSArray *toolbarItems ;
+@property(nonatomic,strong)UIBarButtonItem *flexSpace_result;
+@property(nonatomic,strong) UIBarButtonItem *doneButton_result;
+@property(nonatomic,strong)UIToolbar *toolBar_result;
+@property(nonatomic,strong) NSArray *toolbarItems_result;
     @property(nonatomic,strong) UITableView *recovery_tv;
     @property(nonatomic,strong)NSMutableArray *dataArray;
 
@@ -111,6 +123,27 @@
     @property(nonatomic,strong)NSString *passedphoneno_string;
     @property(nonatomic,strong)NSString *passedaddress;
     @property(nonatomic,strong)NSString *passedaddress_string;
+
+@property(nonatomic,strong)NSString *date_string;
+@property(nonatomic,strong)NSString *agent_string;
+@property(nonatomic,strong)NSString *result_string;
+@property(nonatomic,strong)NSString *agentcomments_string;
+@property(nonatomic,strong)NSString *loaneecomments_string;
+@property(nonatomic,strong)NSMutableDictionary *dictionnary;
+@property(nonatomic,strong)UILabel *srlnolbl1;
+@property(nonatomic,strong)UILabel *srlnolbl2;
+@property(nonatomic,strong)UILabel *datelbl1;
+@property(nonatomic,strong)UILabel *datelbl2;
+@property(nonatomic,strong)UILabel *agentlbl1;
+@property(nonatomic,strong)UILabel *agentlbl2;
+@property(nonatomic,strong)UILabel *resultlbl1;
+@property(nonatomic,strong)UILabel *resultlbl2;
+@property(nonatomic,strong)UILabel *agentcommentlbl1;
+@property(nonatomic,strong)UILabel *agentcommentlbl2;
+@property(nonatomic,strong)UILabel *loaneecommentslbl1;
+@property(nonatomic,strong)UILabel * loaneecommentslbl2;
+@property (assign) BOOL clicked;
+
      
         @end
 

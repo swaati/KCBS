@@ -44,7 +44,8 @@
                     @synthesize sw;
                     @synthesize TIGER;
                     @synthesize recovery_array;
-                @synthesize arrofRecovery;
+                    @synthesize arrofRecovery;
+
                     //@synthesize myCollapseClick;
                     //@synthesize name_lbl;
                     - (void)viewDidLoad
@@ -126,6 +127,7 @@
                         ////index
                         switch (index) {
                             case 0:
+                               
                                 return [loans_array[index] valueForKey:@"Loan Acc No"];
                                 break;
                             case 1:
@@ -282,7 +284,7 @@
                                 forControlEvents:UIControlEventTouchUpInside];
                         [agent_view addSubview:visit_btn];
                         UIButton *reminder_btn = [UIButton buttonWithType: UIButtonTypeRoundedRect];
-                        [reminder_btn setFrame:CGRectMake(130,130,180, 30)];
+                        [reminder_btn setFrame:CGRectMake(160,140,140, 30)];
                         reminder_btn.backgroundColor=[UIColor colorWithRed:0.204 green:0.682 blue:0.937 alpha:1];
                         [reminder_btn setTitle:@"SET REMINDER" forState:UIControlStateNormal];
                         [reminder_btn setTitleColor:[UIColor whiteColor] forState:

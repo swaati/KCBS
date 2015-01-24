@@ -121,7 +121,7 @@
                 }
                 -(void)performRequest
                 {
-                        NSURL * url =[[NSURL alloc] initWithString:@"http://192.168.1.127:8080/kcbsAPI/getLoanAccountDetails?loanAcno=AP-001-HL-124564"];
+                        NSURL * url =[[NSURL alloc] initWithString:@"http://192.168.1.116:8080/kcbsAPI/getLoanAccountDetails?loanAcno=AP-001-HL-124564"];
                     
                     NSMutableURLRequest * request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
                     self.connection=[[NSURLConnection alloc]initWithRequest:request

@@ -53,6 +53,7 @@
     @property(nonatomic,strong)NSMutableArray *recovery_array;
     @property(nonatomic,strong)NSMutableArray *arrofRecovery;
 
+
             //@property (nonatomic,strong)CollapseClick *myCollapseClick;
 
 

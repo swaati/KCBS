@@ -358,6 +358,7 @@
     (NSInteger)row forComponent:(NSInteger)component{
         return [pickerArray objectAtIndex:row];
     }
+
     - (void)done:(id)sender {
         
         [type_picker removeFromSuperview];
